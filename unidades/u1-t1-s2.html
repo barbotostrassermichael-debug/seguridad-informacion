@@ -1,0 +1,205 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>U1 - Subtema 2: Principios de la seguridad - SGSI</title>
+    <link rel="icon" type="image/svg+xml" href="../favicon_sgsi.svg">
+    <style>
+        :root {
+            --primary-color: #003366;
+            --secondary-color: #f39c12;
+            --bg-light: #f4f7f6;
+            --text-dark: #333;
+            --integrity-color: #27ae60;
+            --confidentiality-color: #2980b9;
+            --availability-color: #e67e22;
+        }
+
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            line-height: 1.6;
+            margin: 0;
+            background-color: var(--bg-light);
+            color: var(--text-dark);
+        }
+
+        nav {
+            background-color: var(--primary-color);
+            padding: 1rem 10%;
+        }
+
+        nav a {
+            color: white;
+            text-decoration: none;
+            font-weight: bold;
+        }
+
+        .content-container {
+            width: 75%;
+            margin: 2rem auto;
+            background: white;
+            padding: 3rem;
+            border-radius: 8px;
+            box-shadow: 0 4px 10px rgba(0,0,0,0.1);
+        }
+
+        h1 {
+            color: var(--primary-color);
+            border-left: 5px solid var(--secondary-color);
+            padding-left: 15px;
+        }
+
+        h2 {
+            color: var(--primary-color);
+            border-bottom: 2px solid #eee;
+            padding-bottom: 10px;
+            margin-top: 2.5rem;
+        }
+
+        /* Estilo para la Triada */
+        .triada-container {
+            display: flex;
+            justify-content: space-around;
+            margin: 2rem 0;
+            text-align: center;
+        }
+
+        .triada-item {
+            flex: 1;
+            padding: 1.5rem;
+            margin: 0 10px;
+            border-radius: 8px;
+            color: white;
+        }
+
+        .conf { background-color: var(--confidentiality-color); }
+        .int { background-color: var(--integrity-color); }
+        .disp { background-color: var(--availability-color); }
+
+        .example-box {
+            background-color: #f9f9f9;
+            border: 1px solid #ddd;
+            padding: 1.5rem;
+            margin: 1.5rem 0;
+            border-left: 5px solid var(--secondary-color);
+        }
+
+        .note {
+            font-style: italic;
+            color: #666;
+            background: #eee;
+            padding: 10px;
+            border-radius: 4px;
+        }
+
+        .footer-nav {
+            margin-top: 3rem;
+            padding-top: 1rem;
+            border-top: 1px solid #ddd;
+            display: flex;
+            justify-content: space-between;
+        }
+
+        .btn {
+            padding: 0.6rem 1.2rem;
+            background: var(--primary-color);
+            color: white;
+            text-decoration: none;
+            border-radius: 4px;
+            font-size: 0.9rem;
+        }
+
+        .btn-secondary {
+            background: #666;
+        }
+    </style>
+</head>
+<body>
+
+<nav>
+    <a href="../index.html">← Volver al Índice Principal</a>
+</nav>
+
+<div class="content-container">
+    <header>
+        <p><strong>Unidad 1</strong> > Tema 1</p>
+        <h1>Subtema 2: Principios de la seguridad</h1>
+    </header>
+
+    <section>
+        <h2>Introducción a los Principios</h2>
+        <p>
+            La seguridad de la información va mucho más allá de soluciones técnicas puntuales como instalar un firewall o aplicar parches. Se refiere a identificar <strong>qué</strong> debemos proteger, <strong>por qué</strong> lo hacemos, ante qué <strong>amenazas</strong> nos defendemos y <strong>cómo</strong> lo vamos a proteger.
+        </p>
+
+        <div class="example-box">
+            <strong>Diferencia Clave:</strong>
+            <ul>
+                <li><strong>Seguridad de la Información:</strong> Se refiere a la integridad, disponibilidad y confidencialidad de los datos en <em>cualquier formato</em> (impreso, digital, magnético).</li>
+                <li><strong>Seguridad Informática:</strong> Término más concreto que se aplica directamente a los <em>sistemas informáticos</em> y las técnicas tecnológicas.</li>
+            </ul>
+        </div>
+    </section>
+
+    <section>
+        <h2>La Tríada de la Seguridad</h2>
+        <p>Según Sánchez L. (2020), existen tres atributos fundamentales que rigen la seguridad:</p>
+
+        <div class="triada-container">
+            <div class="triada-item conf">
+                <h3>Confidencialidad</h3>
+                <p>Privacidad de la información</p>
+            </div>
+            <div class="triada-item int">
+                <h3>Integridad</h3>
+                <p>Exactitud de los datos</p>
+            </div>
+            <div class="triada-item disp">
+                <h3>Disponibilidad</h3>
+                <p>Acceso cuando se requiere</p>
+            </div>
+        </div>
+
+        <h3>1. La Confidencialidad</h3>
+        <p>
+            Se refiere a la capacidad de evitar que la información sea compartida con individuos o sistemas no autorizados. Su valor inverso es la <strong>revelación</strong>.
+        </p>
+        <p class="note">Ejemplo: Proteger el código fuente de una aplicación o evitar ataques de <em>Phishing</em> que buscan obtener credenciales privadas.</p>
+
+        <h3>2. La Integridad</h3>
+        <p>
+            Su objetivo es preservar los datos y evitar que sean modificados de forma no autorizada. Para garantizarla, el compendio establece tres principios derivados:
+        </p>
+        <ul>
+            <li><strong>Menor privilegio (Need-to-know):</strong> Dar acceso solo a lo imprescindible.</li>
+            <li><strong>Separación de obligaciones (Duties):</strong> Que una tarea requiera más de un responsable.</li>
+            <li><strong>Rotación de obligaciones:</strong> Cambiar los roles de los empleados periódicamente.</li>
+        </ul>
+
+        <h3>3. La Disponibilidad</h3>
+        <p>
+            Es la capacidad de que el sistema y la información estén operativos todo el tiempo que se necesite para las personas autorizadas.
+        </p>
+        <div class="example-box">
+            <strong>Amenazas típicas:</strong>
+            <ul>
+                <li>Ataques de Denegación de Servicio (DoS).</li>
+                <li>Catástrofes naturales (terremotos, inundaciones).</li>
+                <li>Errores humanos o sabotajes.</li>
+            </ul>
+        </div>
+    </section>
+
+    <div class="footer-nav">
+        <a href="u1-t1-s1.html" class="btn btn-secondary">← Anterior: Introducción</a>
+        <a href="u1-t1-s3.html" class="btn">Siguiente: Ámbito económico →</a>
+    </div>
+</div>
+
+<footer>
+    <p style="text-align: center; color: #888; margin-bottom: 2rem;">Asignatura: SGSI | UNEMI</p>
+</footer>
+
+</body>
+</html>

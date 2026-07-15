@@ -1,0 +1,191 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>U2 - Subtema 1: Gestión de Riesgos - SGSI</title>
+    <link rel="icon" type="image/svg+xml" href="../favicon_sgsi.svg">
+    <style>
+        :root {
+            --primary-color: #003366;
+            --secondary-color: #f39c12;
+            --bg-light: #f4f7f6;
+            --text-dark: #333;
+            --management-blue: #3498db;
+        }
+
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            line-height: 1.6;
+            margin: 0;
+            background-color: var(--bg-light);
+            color: var(--text-dark);
+        }
+
+        nav {
+            background-color: var(--primary-color);
+            padding: 1rem 10%;
+        }
+
+        nav a {
+            color: white;
+            text-decoration: none;
+            font-weight: bold;
+        }
+
+        .content-container {
+            width: 75%;
+            margin: 2rem auto;
+            background: white;
+            padding: 3rem;
+            border-radius: 8px;
+            box-shadow: 0 4px 10px rgba(0,0,0,0.1);
+        }
+
+        h1 {
+            color: var(--primary-color);
+            border-left: 5px solid var(--secondary-color);
+            padding-left: 15px;
+        }
+
+        h2 {
+            color: var(--primary-color);
+            border-bottom: 2px solid #eee;
+            padding-bottom: 10px;
+            margin-top: 2rem;
+        }
+
+        .info-card {
+            background-color: #e8f4f8;
+            border-radius: 8px;
+            padding: 1.5rem;
+            margin: 1.5rem 0;
+            border-left: 5px solid var(--management-blue);
+        }
+
+        /* Jerarquía de conceptos */
+        .hierarchy-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+            gap: 15px;
+            margin: 2rem 0;
+        }
+
+        .hierarchy-item {
+            border: 1px solid #ddd;
+            padding: 1rem;
+            border-radius: 5px;
+            text-align: center;
+        }
+
+        .hierarchy-item strong {
+            display: block;
+            color: var(--primary-color);
+            margin-bottom: 5px;
+            text-transform: uppercase;
+            font-size: 0.9rem;
+        }
+
+        .traceability-box {
+            background: #fdfefe;
+            border: 1px dashed var(--management-blue);
+            padding: 1rem;
+            margin-top: 1rem;
+        }
+
+        .footer-nav {
+            margin-top: 3rem;
+            padding-top: 1rem;
+            border-top: 1px solid #ddd;
+            display: flex;
+            justify-content: space-between;
+        }
+
+        .btn {
+            padding: 0.6rem 1.2rem;
+            background: var(--primary-color);
+            color: white;
+            text-decoration: none;
+            border-radius: 4px;
+        }
+
+        .btn-secondary { background: #666; }
+    </style>
+</head>
+<body>
+
+<nav>
+    <a href="../index.html">← Volver al Índice Principal</a>
+</nav>
+
+<div class="content-container">
+    <header>
+        <p><strong>Unidad 2</strong> > Tema 2: Gestión de Riesgos</p>
+        <h1>Subtema 1: Introducción y Conceptualización</h1>
+    </header>
+
+    <section>
+        <h2>¿Qué es la Gestión de Riesgos?</h2>
+        <p>
+            La gestión del riesgo es una actividad fundamental que debe enmarcarse en las opciones de mitigación, utilizando diferentes modelos económicos. Es el proceso que permite decidir si una organización debe <strong>asumir, mitigar o externalizar</strong> (transferir) un riesgo.
+        </p>
+        <div class="info-card">
+            <strong>Dato clave:</strong> Los controles descritos en normas internacionales como la ISO son el resultado directo de una gestión de riesgos previa.
+        </div>
+    </section>
+
+    <section>
+        <h2>Trazabilidad y Registros</h2>
+        <p>
+            Es imperativo que todas las actividades relacionadas con la gestión del riesgo sean <strong>rastreables</strong>. Los registros generados no solo sirven como evidencia, sino que son la base para la mejora continua del proceso.
+        </p>
+        <div class="traceability-box">
+            Al crear registros, se deben considerar las necesidades legales, operacionales, el método de acceso y el carácter sensible de la información.
+        </div>
+    </section>
+
+    <section>
+        <h2>Programas de Gestión de la Seguridad</h2>
+        <p>
+            Un programa de gestión busca la mejora constante mediante actividades organizadas para preservar la confidencialidad, integridad y disponibilidad. Se materializa en cuatro herramientas fundamentales:
+        </p>
+
+        <div class="hierarchy-grid">
+            <div class="hierarchy-item">
+                <strong>Políticas</strong>
+                Establecen las directrices generales de la organización.
+            </div>
+            <div class="hierarchy-item">
+                <strong>Estándares</strong>
+                Establecen las herramientas y métodos requeridos (obligatorios).
+            </div>
+            <div class="hierarchy-item">
+                <strong>Líneas Base</strong>
+                Establecen los parámetros de configuración que se utilizarán.
+            </div>
+            <div class="hierarchy-item">
+                <strong>Procedimientos</strong>
+                Guías paso a paso para las tareas que se realizan diariamente.
+            </div>
+        </div>
+    </section>
+
+    <section>
+        <h2>Concienciación y Capacitación</h2>
+        <p>
+            El compendio destaca que para lograr una implementación efectiva de estas herramientas, son esenciales los programas de <strong>sensibilización y capacitación</strong> de los empleados. Sin el factor humano alineado, los controles administrativos pierden eficacia.
+        </p>
+    </section>
+
+    <div class="footer-nav">
+        <a href="u2-t1-s4.html" class="btn btn-secondary">← Anterior: Tipos de Análisis</a>
+        <a href="u2-t2-s2.html" class="btn">Siguiente: La Gestión de Riesgo →</a>
+    </div>
+</div>
+
+<footer>
+    <p style="text-align: center; color: #888; margin-bottom: 2rem;">Asignatura: SGSI | UNEMI</p>
+</footer>
+
+</body>
+</html>

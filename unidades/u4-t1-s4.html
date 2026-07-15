@@ -1,0 +1,233 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>U4 - Subtema 4: Buenas prácticas - SGSI</title>
+    <link rel="icon" type="image/svg+xml" href="../favicon_sgsi.svg">
+    <style>
+        :root {
+            --primary-color: #003366;
+            --secondary-color: #f39c12;
+            --bg-light: #f4f7f6;
+            --text-dark: #333;
+            --lifecycle-blue: #2980b9;
+        }
+
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            line-height: 1.6;
+            margin: 0;
+            background-color: var(--bg-light);
+            color: var(--text-dark);
+        }
+
+        nav {
+            background-color: var(--primary-color);
+            padding: 1rem 10%;
+        }
+
+        nav a {
+            color: white;
+            text-decoration: none;
+            font-weight: bold;
+        }
+
+        .content-container {
+            width: 75%;
+            margin: 2rem auto;
+            background: white;
+            padding: 3rem;
+            border-radius: 8px;
+            box-shadow: 0 4px 10px rgba(0,0,0,0.1);
+        }
+
+        h1 {
+            color: var(--primary-color);
+            border-left: 5px solid var(--secondary-color);
+            padding-left: 15px;
+        }
+
+        h2 {
+            color: var(--primary-color);
+            border-bottom: 2px solid #eee;
+            padding-bottom: 10px;
+            margin-top: 2rem;
+        }
+
+        /* Ciclo de Vida */
+        .lifecycle-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 15px;
+            margin: 2rem 0;
+        }
+
+        .phase-card {
+            background: #fff;
+            border: 1px solid #ddd;
+            padding: 1.5rem;
+            border-radius: 8px;
+            position: relative;
+            border-top: 5px solid var(--lifecycle-blue);
+        }
+
+        .phase-card h3 {
+            margin-top: 0;
+            font-size: 1rem;
+            color: var(--lifecycle-blue);
+            text-transform: uppercase;
+        }
+
+        .important-distinction {
+            background-color: #eef7ff;
+            border: 1px solid #d1e9ff;
+            padding: 1.5rem;
+            border-radius: 8px;
+            margin: 2rem 0;
+        }
+
+        /* Lista de Buenas Prácticas */
+        .best-practices {
+            list-style: none;
+            padding: 0;
+        }
+
+        .practice-item {
+            display: flex;
+            align-items: flex-start;
+            margin-bottom: 15px;
+            background: #fdfefe;
+            padding: 15px;
+            border: 1px solid #eee;
+            border-radius: 5px;
+        }
+
+        .practice-number {
+            background: var(--secondary-color);
+            color: white;
+            width: 25px;
+            height: 25px;
+            border-radius: 50%;
+            text-align: center;
+            line-height: 25px;
+            margin-right: 15px;
+            flex-shrink: 0;
+            font-weight: bold;
+        }
+
+        .footer-nav {
+            margin-top: 3rem;
+            padding-top: 1rem;
+            border-top: 1px solid #ddd;
+            display: flex;
+            justify-content: space-between;
+        }
+
+        .btn {
+            padding: 0.6rem 1.2rem;
+            background: var(--primary-color);
+            color: white;
+            text-decoration: none;
+            border-radius: 4px;
+        }
+
+        .btn-secondary { background: #666; }
+        .btn-next { background: #27ae60; font-weight: bold; }
+    </style>
+</head>
+<body>
+
+<nav>
+    <a href="../index.html">← Volver al Índice Principal</a>
+</nav>
+
+<div class="content-container">
+    <header>
+        <p><strong>Unidad 4</strong> > Tema 1: Fundamentos de Política de seguridad</p>
+        <h1>Subtema 4: Buenas prácticas</h1>
+    </header>
+
+    <section>
+        <h2>El Ciclo de Vida de las Políticas</h2>
+        <p>
+            Una "buena práctica" no es solo el documento en sí, sino cómo se gestiona desde su creación hasta su eliminación. El compendio define 6 fases críticas:
+        </p>
+
+        <div class="lifecycle-grid">
+            <div class="phase-card">
+                <h3>1. Desarrollo</h3>
+                <p>Asignación de responsabilidades para estructurar, redactar y aprobar los textos.</p>
+            </div>
+            <div class="phase-card">
+                <h3>2. Cumplimiento</h3>
+                <p>Implementación real y vinculación con los controles de seguridad documentados.</p>
+            </div>
+            <div class="phase-card">
+                <h3>3. Comunicación</h3>
+                <p>Difusión a empleados y terceros. Sin conocimiento de la política, no hay cumplimiento.</p>
+            </div>
+            <div class="phase-card">
+                <h3>4. Monitoreo</h3>
+                <p>Uso de indicadores para verificar periódicamente si la política está funcionando.</p>
+            </div>
+            <div class="phase-card">
+                <h3>5. Mantenimiento</h3>
+                <p>Actualización constante basada en la retroalimentación y cambios del entorno.</p>
+            </div>
+            <div class="phase-card">
+                <h3>6. Retiro</h3>
+                <p>Eliminación de políticas obsoletas que ya cumplieron su propósito en la organización.</p>
+            </div>
+        </div>
+    </section>
+
+    <section class="important-distinction">
+        <strong>Recordatorio Vital:</strong>
+        <p>
+            Una política <strong>no equivale a un estándar</strong>. No debe detallar el "paso a paso" técnico ni especificar marcas de tecnología. Son enunciados de alto nivel que establecen objetivos.
+        </p>
+    </section>
+
+    <section>
+        <h2>6 Consejos Finales de Implementación</h2>
+        <div class="best-practices">
+            <div class="practice-item">
+                <div class="practice-number">1</div>
+                <div><strong>Claridad:</strong> Crear políticas fáciles de entender y seguir para todos los niveles.</div>
+            </div>
+            <div class="practice-item">
+                <div class="practice-number">2</div>
+                <div><strong>Actualización:</strong> Revisar regularmente para reflejar cambios en el entorno de seguridad.</div>
+            </div>
+            <div class="practice-item">
+                <div class="practice-number">3</div>
+                <div><strong>Riesgos:</strong> Identificar amenazas potenciales para proteger activos específicos.</div>
+            </div>
+            <div class="practice-item">
+                <div class="practice-number">4</div>
+                <div><strong>Roles:</strong> Definir claramente qué se espera de cada empleado.</div>
+            </div>
+            <div class="practice-item">
+                <div class="practice-number">5</div>
+                <div><strong>Controles:</strong> Incluir firewalls, antivirus y políticas de contraseñas robustas.</div>
+            </div>
+            <div class="practice-item">
+                <div class="practice-number">6</div>
+                <div><strong>Capacitación:</strong> Garantizar que el personal sepa cómo proteger los activos.</div>
+            </div>
+        </div>
+    </section>
+
+    <div class="footer-nav">
+        <a href="u4-t1-s3.html" class="btn btn-secondary">← Anterior: Elementos de una política</a>
+        <a href="u4-t2-s1.html" class="btn btn-next">Siguiente: La Seguridad como profesión (Tema 2) →</a>
+    </div>
+</div>
+
+<footer>
+    <p style="text-align: center; color: #888; margin-bottom: 2rem;">Asignatura: SGSI | UNEMI</p>
+</footer>
+
+</body>
+</html>

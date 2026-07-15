@@ -1,0 +1,187 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>U3 - Subtema 2: Cifrado por permutación - SGSI</title>
+    <link rel="icon" type="image/svg+xml" href="../favicon_sgsi.svg">
+    <style>
+        :root {
+            --primary-color: #003366;
+            --secondary-color: #f39c12;
+            --bg-light: #f4f7f6;
+            --text-dark: #333;
+            --grid-border: #bdc3c7;
+        }
+
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            line-height: 1.6;
+            margin: 0;
+            background-color: var(--bg-light);
+            color: var(--text-dark);
+        }
+
+        nav {
+            background-color: var(--primary-color);
+            padding: 1rem 10%;
+        }
+
+        nav a {
+            color: white;
+            text-decoration: none;
+            font-weight: bold;
+        }
+
+        .content-container {
+            width: 75%;
+            margin: 2rem auto;
+            background: white;
+            padding: 3rem;
+            border-radius: 8px;
+            box-shadow: 0 4px 10px rgba(0,0,0,0.1);
+        }
+
+        h1 {
+            color: var(--primary-color);
+            border-left: 5px solid var(--secondary-color);
+            padding-left: 15px;
+        }
+
+        h2 {
+            color: var(--primary-color);
+            border-bottom: 2px solid #eee;
+            padding-bottom: 10px;
+            margin-top: 2rem;
+        }
+
+        /* Estilo para las rejillas de transposición */
+        .cipher-grid {
+            border-collapse: collapse;
+            margin: 1.5rem auto;
+            font-family: 'Courier New', Courier, monospace;
+            font-weight: bold;
+            font-size: 1.2rem;
+        }
+
+        .cipher-grid td {
+            border: 2px solid var(--grid-border);
+            width: 40px;
+            height: 40px;
+            text-align: center;
+            background: #fff;
+        }
+
+        .cipher-example {
+            background: #f9f9f9;
+            padding: 1.5rem;
+            border-radius: 8px;
+            border: 1px solid #ddd;
+            margin: 2rem 0;
+            text-align: center;
+        }
+
+        .highlight-text {
+            color: #c0392b;
+            font-weight: bold;
+            word-break: break-all;
+        }
+
+        .note-box {
+            background-color: #e8f4f8;
+            border-left: 5px solid #2980b9;
+            padding: 1rem;
+            margin: 1rem 0;
+            font-size: 0.95rem;
+        }
+
+        .footer-nav {
+            margin-top: 3rem;
+            padding-top: 1rem;
+            border-top: 1px solid #ddd;
+            display: flex;
+            justify-content: space-between;
+        }
+
+        .btn {
+            padding: 0.6rem 1.2rem;
+            background: var(--primary-color);
+            color: white;
+            text-decoration: none;
+            border-radius: 4px;
+        }
+
+        .btn-secondary { background: #666; }
+    </style>
+</head>
+<body>
+
+<nav>
+    <a href="../index.html">← Volver al Índice Principal</a>
+</nav>
+
+<div class="content-container">
+    <header>
+        <p><strong>Unidad 3</strong> > Tema 2: Cifrado Clásico y Moderno</p>
+        <h1>Subtema 2: Cifrado por permutación</h1>
+    </header>
+
+    <section>
+        <h2>La Escítala Espartana</h2>
+        <p>
+            Es el sistema de cifra más antiguo conocido (siglo V a.C.). Consistía en enrollar una cinta de cuero sobre un bastón de madera. El mensaje se escribía longitudinalmente y, al desenrollar la cinta, las letras aparecían desordenadas.
+        </p>
+        <div class="note-box">
+            <strong>La Clave:</strong> En este método, la clave reside exclusivamente en el <strong>diámetro del bastón</strong>. Es un método de transposición puro donde los caracteres no cambian, solo su posición.
+        </div>
+    </section>
+
+    <section>
+        <h2>Transposición por Columnas</h2>
+        <p>
+            En este método, el texto en claro se escribe <strong>horizontalmente</strong> en filas de una longitud fija (la clave) y se lee <strong>verticalmente</strong> por columnas.
+        </p>
+
+        <div class="cipher-example">
+            <h3>Ejemplo: Texto "TRANSPOSICION" (Clave L=5)</h3>
+            <table class="cipher-grid">
+                <tr><td>T</td><td>R</td><td>A</td><td>N</td><td>S</td></tr>
+                <tr><td>P</td><td>O</td><td>S</td><td>I</td><td>C</td></tr>
+                <tr><td>I</td><td>O</td><td>N</td><td>P</td><td>O</td></tr>
+                <tr><td>R</td><td>C</td><td>O</td><td>L</td><td>U</td></tr>
+                <tr><td>M</td><td>N</td><td>A</td><td>S</td><td>X</td></tr>
+            </table>
+            <p><strong>Criptograma resultante (lectura vertical):</strong></p>
+            <p class="highlight-text">TPIRM ROOCN ASNOA NIPLS SCOUX</p>
+        </div>
+    </section>
+
+    <section>
+        <h2>Transposición por Filas</h2>
+        <p>
+            Funciona de manera inversa al anterior: el texto se escribe <strong>verticalmente</strong> en columnas y se lee <strong>horizontalmente</strong> por filas.
+        </p>
+        <div class="note-box">
+            <strong>El Relleno (Padding):</strong> Como se observa en los ejemplos, si el texto no llena la cuadrícula exacta, se utilizan rellenos como la letra <strong>'X'</strong>. En sistemas modernos, se utilizan rellenos de bits o bytes para completar los bloques de cifrado.
+        </div>
+    </section>
+
+    <section>
+        <h2>Curiosidad Histórica: El Telégrafo</h2>
+        <p>
+            Antiguamente era común agrupar los criptogramas en bloques de <strong>5 letras</strong>. Esto se debía a las tarifas y limitaciones del <strong>telégrafo</strong>, que contaba las palabras o grupos de caracteres de esta forma para el cobro del servicio.
+        </p>
+    </section>
+
+    <div class="footer-nav">
+        <a href="u3-t2-s1.html" class="btn btn-secondary">← Anterior: Clasificación Clásica</a>
+        <a href="u3-t2-s3.html" class="btn">Siguiente: Cifrado Moderno →</a>
+    </div>
+</div>
+
+<footer>
+    <p style="text-align: center; color: #888; margin-bottom: 2rem;">Asignatura: SGSI | UNEMI</p>
+</footer>
+
+</body>
+</html>

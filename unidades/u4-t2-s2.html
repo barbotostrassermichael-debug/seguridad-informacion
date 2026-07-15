@@ -1,0 +1,208 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>U4 - Subtema 2: Funciones del Profesional - SGSI</title>
+    <link rel="icon" type="image/svg+xml" href="../favicon_sgsi.svg">
+    <style>
+        :root {
+            --primary-color: #003366;
+            --secondary-color: #f39c12;
+            --bg-light: #f4f7f6;
+            --text-dark: #333;
+            --tech-blue: #2980b9;
+            --comp-purple: #8e44ad;
+        }
+
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            line-height: 1.6;
+            margin: 0;
+            background-color: var(--bg-light);
+            color: var(--text-dark);
+        }
+
+        nav {
+            background-color: var(--primary-color);
+            padding: 1rem 10%;
+        }
+
+        nav a {
+            color: white;
+            text-decoration: none;
+            font-weight: bold;
+        }
+
+        .content-container {
+            width: 80%;
+            margin: 2rem auto;
+            background: white;
+            padding: 3rem;
+            border-radius: 8px;
+            box-shadow: 0 4px 10px rgba(0,0,0,0.1);
+        }
+
+        h1 {
+            color: var(--primary-color);
+            border-left: 5px solid var(--secondary-color);
+            padding-left: 15px;
+        }
+
+        h2 {
+            color: var(--primary-color);
+            border-bottom: 2px solid #eee;
+            padding-bottom: 10px;
+            margin-top: 2.5rem;
+        }
+
+        /* Categorías de Funciones */
+        .function-category {
+            margin: 2rem 0;
+            padding: 1.5rem;
+            border-radius: 8px;
+        }
+
+        .audit-bg { background-color: #e3f2fd; border-left: 6px solid var(--tech-blue); }
+        .compliance-bg { background-color: #f3e5f5; border-left: 6px solid var(--comp-purple); }
+        .deploy-bg { background-color: #e8f5e9; border-left: 6px solid #27ae60; }
+
+        .function-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+            gap: 15px;
+            margin-top: 1rem;
+        }
+
+        .function-card {
+            background: white;
+            padding: 1rem;
+            border: 1px solid #ddd;
+            border-radius: 5px;
+        }
+
+        .function-card strong {
+            color: var(--primary-color);
+            display: block;
+            margin-bottom: 5px;
+        }
+
+        .footer-nav {
+            margin-top: 3rem;
+            padding-top: 1rem;
+            border-top: 1px solid #ddd;
+            display: flex;
+            justify-content: space-between;
+        }
+
+        .btn {
+            padding: 0.6rem 1.2rem;
+            background: var(--primary-color);
+            color: white;
+            text-decoration: none;
+            border-radius: 4px;
+        }
+
+        .btn-secondary { background: #666; }
+    </style>
+</head>
+<body>
+
+<nav>
+    <a href="../index.html">← Volver al Índice Principal</a>
+</nav>
+
+<div class="content-container">
+    <header>
+        <p><strong>Unidad 4</strong> > Tema 2: La Seguridad como profesión</p>
+        <h1>Subtema 2: Funciones del profesional de la seguridad</h1>
+    </header>
+
+    <p>
+        El ámbito de la seguridad de la información es extenso e implica una gran variedad de tareas. Aunque todas comparten el objetivo de protección, se dividen en áreas de especialización:
+    </p>
+
+    <!-- Área 1: Auditoría Técnica -->
+    <section class="function-category audit-bg">
+        <h2>1. Auditoría Técnica</h2>
+        <p>Proyectos específicos para un análisis detallado del nivel de seguridad técnica:</p>
+        <div class="function-grid">
+            <div class="function-card">
+                <strong>Hacking Ético / Test de Intrusión</strong>
+                Simular ataques para identificar vulnerabilidades antes que un atacante real.
+            </div>
+            <div class="function-card">
+                <strong>Análisis Forense</strong>
+                Investigación para determinar causas de incidentes ocurridos.
+            </div>
+            <div class="function-card">
+                <strong>Análisis de Malware</strong>
+                Examen de archivos o sitios web para detectar software malicioso.
+            </div>
+            <div class="function-card">
+                <strong>Revisión de Código</strong>
+                Evaluación de la robustez de seguridad en el desarrollo de software.
+            </div>
+        </div>
+    </section>
+
+    <!-- Área 2: Cumplimiento -->
+    <section class="function-category compliance-bg">
+        <h2>2. Cumplimiento (Compliance)</h2>
+        <p>Proyectos enfocados en la gestión de riesgos y normativa:</p>
+        <div class="function-grid">
+            <div class="function-card">
+                <strong>Certificación (ISO 27001)</strong>
+                Implementar controles para obtener sellos de calidad internacionales.
+            </div>
+            <div class="function-card">
+                <strong>Cumplimiento Legal</strong>
+                Asegurar el cumplimiento de leyes como la LOPD o el estándar PCI DSS.
+            </div>
+            <div class="function-card">
+                <strong>Cuerpo Normativo</strong>
+                Creación y actualización de políticas, estándares y guías de referencia.
+            </div>
+            <div class="function-card">
+                <strong>Evaluación de Seguridad</strong>
+                Uso de métricas y cuadros de mando para medir el estado del SGSI.
+            </div>
+        </div>
+    </section>
+
+    <!-- Área 3: Despliegue de Soluciones -->
+    <section class="function-category deploy-bg">
+        <h2>3. Despliegue y Operación</h2>
+        <p>Implementación técnica y vigilancia continua:</p>
+        <div class="function-grid">
+            <div class="function-card">
+                <strong>Control de Accesos</strong>
+                Uso de tecnologías NAC, biometría y gestión de identidades privilegiadas.
+            </div>
+            <div class="function-card">
+                <strong>DLP / IRM</strong>
+                Herramientas para prevenir la divulgación de información sensible.
+            </div>
+            <div class="function-card">
+                <strong>SOC (Centro de Operaciones)</strong>
+                Operación de la seguridad mediante vigilancia 24/7 (propia o externa).
+            </div>
+            <div class="function-card">
+                <strong>Seguridad Industrial (ICS)</strong>
+                Protección de entornos críticos como SCADAs y plantas eléctricas.
+            </div>
+        </div>
+    </section>
+
+    <div class="footer-nav">
+        <a href="u4-t2-s1.html" class="btn btn-secondary">← Anterior: Campo Profesional</a>
+        <a href="u4-t2-s3.html" class="btn">Siguiente: Certificaciones Profesionales →</a>
+    </div>
+</div>
+
+<footer>
+    <p style="text-align: center; color: #888; margin-bottom: 2rem;">Asignatura: SGSI | UNEMI</p>
+</footer>
+
+</body>
+</html>

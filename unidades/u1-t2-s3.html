@@ -1,0 +1,222 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>U1 - Subtema 3: Buenas prácticas de seguridad en TI - SGSI</title>
+    <link rel="icon" type="image/svg+xml" href="../favicon_sgsi.svg">
+    <style>
+        :root {
+            --primary-color: #003366;
+            --secondary-color: #f39c12;
+            --bg-light: #f4f7f6;
+            --text-dark: #333;
+            --itil-purple: #8e44ad;
+            --sla-blue: #2980b9;
+        }
+
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            line-height: 1.6;
+            margin: 0;
+            background-color: var(--bg-light);
+            color: var(--text-dark);
+        }
+
+        nav {
+            background-color: var(--primary-color);
+            padding: 1rem 10%;
+        }
+
+        nav a {
+            color: white;
+            text-decoration: none;
+            font-weight: bold;
+        }
+
+        .content-container {
+            width: 75%;
+            margin: 2rem auto;
+            background: white;
+            padding: 3rem;
+            border-radius: 8px;
+            box-shadow: 0 4px 10px rgba(0,0,0,0.1);
+        }
+
+        h1 {
+            color: var(--primary-color);
+            border-left: 5px solid var(--secondary-color);
+            padding-left: 15px;
+        }
+
+        h2 {
+            color: var(--primary-color);
+            border-bottom: 2px solid #eee;
+            padding-bottom: 10px;
+            margin-top: 2.5rem;
+        }
+
+        .info-box {
+            background-color: #eaf2f8;
+            border-left: 5px solid var(--sla-blue);
+            padding: 1.5rem;
+            margin: 1.5rem 0;
+        }
+
+        /* Estilos para SLA */
+        .formula-box {
+            background: #2c3e50;
+            color: #ecf0f1;
+            padding: 1.5rem;
+            text-align: center;
+            border-radius: 8px;
+            font-family: 'Courier New', Courier, monospace;
+            font-size: 1.2rem;
+            margin: 1rem 0;
+        }
+
+        .penalty-table {
+            width: 100%;
+            border-collapse: collapse;
+            margin: 1rem 0;
+        }
+
+        .penalty-table td, .penalty-table th {
+            border: 1px solid #ddd;
+            padding: 8px;
+            text-align: center;
+        }
+
+        .penalty-table th { background-color: #f2f2f2; }
+
+        /* Estilos para ITIL */
+        .itil-grid {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 20px;
+            margin: 2rem 0;
+        }
+
+        .itil-card {
+            border: 1px solid #ddd;
+            padding: 1.5rem;
+            border-radius: 8px;
+            border-top: 4px solid var(--itil-purple);
+        }
+
+        .itil-features {
+            background: #fdfefe;
+            border: 1px solid #d4e6f1;
+            padding: 1rem;
+            border-radius: 5px;
+        }
+
+        .footer-nav {
+            margin-top: 3rem;
+            padding-top: 1rem;
+            border-top: 1px solid #ddd;
+            display: flex;
+            justify-content: space-between;
+        }
+
+        .btn {
+            padding: 0.6rem 1.2rem;
+            background: var(--primary-color);
+            color: white;
+            text-decoration: none;
+            border-radius: 4px;
+        }
+
+        .btn-secondary { background: #666; }
+    </style>
+</head>
+<body>
+
+<nav>
+    <a href="../index.html">← Volver al Índice Principal</a>
+</nav>
+
+<div class="content-container">
+    <header>
+        <p><strong>Unidad 1</strong> > Tema 2: La norma ISO 27001</p>
+        <h1>Subtema 3: Buenas prácticas en la gestión de servicios de TI</h1>
+    </header>
+
+    <section>
+        <h2>Gestión de Servicios de TI</h2>
+        <p>
+            Un servicio de TI se refiere a la prestación de soporte tecnológico por parte de un proveedor para apoyar los procesos de negocio del cliente. Esta gestión abarca tres componentes fundamentales: <strong>Personas, Procesos y Tecnología</strong>.
+        </p>
+    </section>
+
+    <section>
+        <h2>SLA: Service Level Agreement</h2>
+        <p>
+            Los <strong>Acuerdos de Nivel de Servicio (SLA)</strong> son contratos formales entre usuarios y proveedores que definen los niveles de calidad y predictibilidad del servicio.
+        </p>
+
+        <div class="info-box">
+            <strong>Fórmula de Disponibilidad:</strong>
+            <div class="formula-box">D = (T - Td) / T</div>
+            <p><small>* Donde <strong>T</strong> es el tiempo total mensual y <strong>Td</strong> es el tiempo de pérdida de conectividad.</small></p>
+        </div>
+
+        <h3>Ejemplo de Penalizaciones según Disponibilidad:</h3>
+        <table class="penalty-table">
+            <tr><th>Disponibilidad (D)</th><th>Nivel</th></tr>
+            <tr><td>99% > D >= 98%</td><td>Nivel A</td></tr>
+            <tr><td>98% > D >= 96%</td><td>Nivel B</td></tr>
+            <tr><td>96% > D >= 90%</td><td>Nivel C</td></tr>
+            <tr><td>D < 90%</td><td>Nivel D</td></tr>
+        </table>
+    </section>
+
+    <section>
+        <h2>ITIL: Biblioteca de Infraestructura de TI</h2>
+        <p>
+            Surgida en los años 80 por el gobierno británico, ITIL es el marco de referencia más utilizado para la gestión de servicios de TI. Se divide principalmente en dos áreas:
+        </p>
+
+        <div class="itil-grid">
+            <div class="itil-card">
+                <h3>Soporte de Servicios</h3>
+                <ul>
+                    <li>Service Desk</li>
+                    <li>Gestión de incidentes</li>
+                    <li>Gestión de problemas</li>
+                    <li>Gestión de cambios</li>
+                </ul>
+            </div>
+            <div class="itil-card">
+                <h3>Entrega de Servicios</h3>
+                <ul>
+                    <li>Gestión de niveles de servicio</li>
+                    <li>Gestión financiera</li>
+                    <li>Gestión de la disponibilidad</li>
+                    <li>Gestión de la capacidad</li>
+                </ul>
+            </div>
+        </div>
+
+        <div class="itil-features">
+            <h3>Características de ITIL:</h3>
+            <ul>
+                <li><strong>No es propietario:</strong> No depende de ninguna tecnología o proveedor específico.</li>
+                <li><strong>No es prescriptivo:</strong> Ofrece prácticas probadas, pero no es obligatorio seguirlas al pie de la letra; se adaptan a la organización.</li>
+                <li><strong>Basado en mejores prácticas:</strong> Es el resultado de la experiencia acumulada a nivel global.</li>
+            </ul>
+        </div>
+    </section>
+
+    <div class="footer-nav">
+        <a href="u1-t2-s2.html" class="btn btn-secondary">← Anterior: El estándar ISO 27001</a>
+        <a href="u1-t2-s4.html" class="btn">Siguiente: El estándar ISO 22301 →</a>
+    </div>
+</div>
+
+<footer>
+    <p style="text-align: center; color: #888; margin-bottom: 2rem;">Asignatura: SGSI | UNEMI</p>
+</footer>
+
+</body>
+</html>

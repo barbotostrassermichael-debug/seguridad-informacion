@@ -1,0 +1,216 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>U4 - Subtema 3: Elementos de una política de seguridad - SGSI</title>
+    <link rel="icon" type="image/svg+xml" href="../favicon_sgsi.svg">
+    <style>
+        :root {
+            --primary-color: #003366;
+            --secondary-color: #f39c12;
+            --bg-light: #f4f7f6;
+            --text-dark: #333;
+            --psi-teal: #1abc9c;
+        }
+
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            line-height: 1.6;
+            margin: 0;
+            background-color: var(--bg-light);
+            color: var(--text-dark);
+        }
+
+        nav {
+            background-color: var(--primary-color);
+            padding: 1rem 10%;
+        }
+
+        nav a {
+            color: white;
+            text-decoration: none;
+            font-weight: bold;
+        }
+
+        .content-container {
+            width: 75%;
+            margin: 2rem auto;
+            background: white;
+            padding: 3rem;
+            border-radius: 8px;
+            box-shadow: 0 4px 10px rgba(0,0,0,0.1);
+        }
+
+        h1 {
+            color: var(--primary-color);
+            border-left: 5px solid var(--secondary-color);
+            padding-left: 15px;
+        }
+
+        h2 {
+            color: var(--primary-color);
+            border-bottom: 2px solid #eee;
+            padding-bottom: 10px;
+            margin-top: 2.5rem;
+        }
+
+        /* Ciclo PSI */
+        .psi-circle {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+            gap: 15px;
+            margin: 2rem 0;
+            text-align: center;
+        }
+
+        .psi-node {
+            background: #fff;
+            border: 2px solid var(--psi-teal);
+            padding: 1rem;
+            border-radius: 50px;
+            font-weight: bold;
+            color: var(--psi-teal);
+        }
+
+        /* Componentes */
+        .components-list {
+            list-style: none;
+            padding: 0;
+        }
+
+        .component-item {
+            background: #f9f9f9;
+            margin-bottom: 10px;
+            padding: 15px;
+            border-radius: 5px;
+            border-left: 5px solid var(--primary-color);
+        }
+
+        .component-item strong {
+            color: var(--primary-color);
+            display: block;
+            margin-bottom: 5px;
+        }
+
+        .review-box {
+            background-color: #fff4e5;
+            border: 1px solid #ffcc80;
+            padding: 1.5rem;
+            border-radius: 8px;
+            margin-top: 2rem;
+        }
+
+        .language-note {
+            border: 1px dashed #7f8c8d;
+            padding: 1rem;
+            background: #fdfefe;
+            font-style: italic;
+        }
+
+        .footer-nav {
+            margin-top: 3rem;
+            padding-top: 1rem;
+            border-top: 1px solid #ddd;
+            display: flex;
+            justify-content: space-between;
+        }
+
+        .btn {
+            padding: 0.6rem 1.2rem;
+            background: var(--primary-color);
+            color: white;
+            text-decoration: none;
+            border-radius: 4px;
+        }
+
+        .btn-secondary { background: #666; }
+    </style>
+</head>
+<body>
+
+<nav>
+    <a href="../index.html">← Volver al Índice Principal</a>
+</nav>
+
+<div class="content-container">
+    <header>
+        <p><strong>Unidad 4</strong> > Tema 1: Fundamentos de Política de seguridad</p>
+        <h1>Subtema 3: Elementos de una política de seguridad</h1>
+    </header>
+
+    <section>
+        <h2>La Política de Seguridad de la Información (P.S.I.)</h2>
+        <p>
+            Es fundamental que exista una política clara que oriente todas las decisiones en materia de seguridad. El compendio presenta la P.S.I. como un ciclo continuo de mejora:
+        </p>
+
+        <div class="psi-circle">
+            <div class="psi-node">1. Definición de necesidades</div>
+            <div class="psi-node">2. Implementación</div>
+            <div class="psi-node">3. Auditoría de seguridad</div>
+            <div class="psi-node">4. Definición de acciones</div>
+        </div>
+    </section>
+
+    <section>
+        <h2>Componentes Principales</h2>
+        <p>Toda política robusta debe contemplar al menos estos cinco componentes:</p>
+        
+        <div class="components-list">
+            <div class="component-item">
+                <strong>1. Alcance de las políticas</strong>
+                Establece claramente el ámbito de aplicación: facilidades, sistemas y personal afectado.
+            </div>
+            <div class="component-item">
+                <strong>2. Objetivos de la política</strong>
+                Define los elementos involucrados y las responsabilidades para cada servicio y recurso informático.
+            </div>
+            <div class="component-item">
+                <strong>3. Requerimientos mínimos</strong>
+                Especifica los requisitos técnicos de configuración para los sistemas incluidos en el alcance.
+            </div>
+            <div class="component-item">
+                <strong>4. Definición de violaciones y sanciones</strong>
+                Clarifica qué constituye una falta y cuáles son las sanciones correspondientes para quienes no cumplan.
+            </div>
+            <div class="component-item">
+                <strong>5. Responsabilidades</strong>
+                Establece las obligaciones de los usuarios en relación a la información a la que tienen acceso.
+            </div>
+        </div>
+    </section>
+
+    <section>
+        <h2>Lenguaje y Comunicación</h2>
+        <div class="language-note">
+            "Es esencial que las políticas estén escritas en un lenguaje claro y fácil de entender, evitando jergas técnicas y términos ambiguos, sin comprometer la precisión de la información."
+        </div>
+    </section>
+
+    <section class="review-box">
+        <h3>Revisión y Actualización</h3>
+        <p>
+            Las políticas no son documentos estáticos. Deben revisarse regularmente para adecuarse a cambios relevantes como:
+        </p>
+        <ul>
+            <li>Contratación de nuevo personal.</li>
+            <li>Cambios en la infraestructura tecnológica.</li>
+            <li>Alta rotación de empleados.</li>
+            <li>Implementación de nuevos servicios o expansión regional.</li>
+            <li>Cambio o diversificación del área de negocios.</li>
+        </ul>
+    </section>
+
+    <div class="footer-nav">
+        <a href="u4-t1-s2.html" class="btn btn-secondary">← Anterior: Diseño de Políticas</a>
+        <a href="u4-t1-s4.html" class="btn">Siguiente: Buenas prácticas →</a>
+    </div>
+</div>
+
+<footer>
+    <p style="text-align: center; color: #888; margin-bottom: 2rem;">Asignatura: SGSI | UNEMI</p>
+</footer>
+
+</body>
+</html>

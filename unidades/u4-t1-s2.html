@@ -1,0 +1,226 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>U4 - Subtema 2: Diseño de Políticas de Seguridad - SGSI</title>
+    <link rel="icon" type="image/svg+xml" href="../favicon_sgsi.svg">
+    <style>
+        :root {
+            --primary-color: #003366;
+            --secondary-color: #f39c12;
+            --bg-light: #f4f7f6;
+            --text-dark: #333;
+            --design-blue: #2980b9;
+        }
+
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            line-height: 1.6;
+            margin: 0;
+            background-color: var(--bg-light);
+            color: var(--text-dark);
+        }
+
+        nav {
+            background-color: var(--primary-color);
+            padding: 1rem 10%;
+        }
+
+        nav a {
+            color: white;
+            text-decoration: none;
+            font-weight: bold;
+        }
+
+        .content-container {
+            width: 75%;
+            margin: 2rem auto;
+            background: white;
+            padding: 3rem;
+            border-radius: 8px;
+            box-shadow: 0 4px 10px rgba(0,0,0,0.1);
+        }
+
+        h1 {
+            color: var(--primary-color);
+            border-left: 5px solid var(--secondary-color);
+            padding-left: 15px;
+        }
+
+        h2 {
+            color: var(--primary-color);
+            border-bottom: 2px solid #eee;
+            padding-bottom: 10px;
+            margin-top: 2rem;
+        }
+
+        .importance-box {
+            background-color: #f9f9f9;
+            border: 1px solid #ddd;
+            padding: 1.5rem;
+            border-radius: 8px;
+            margin-bottom: 2rem;
+        }
+
+        /* Esquema de Diseño */
+        .scheme-container {
+            margin: 2rem 0;
+        }
+
+        .scheme-step {
+            display: flex;
+            margin-bottom: 20px;
+            background: #fff;
+            border: 1px solid #eee;
+            border-radius: 8px;
+            overflow: hidden;
+            box-shadow: 0 2px 5px rgba(0,0,0,0.05);
+        }
+
+        .step-number {
+            background: var(--design-blue);
+            color: white;
+            width: 60px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 1.5rem;
+            font-weight: bold;
+            flex-shrink: 0;
+        }
+
+        .step-content {
+            padding: 1rem 1.5rem;
+        }
+
+        .step-content h3 {
+            margin-top: 0;
+            color: var(--design-blue);
+            font-size: 1.1rem;
+        }
+
+        .legal-note {
+            background-color: #fff3cd;
+            border: 1px solid #ffeeba;
+            padding: 1rem;
+            border-radius: 5px;
+            margin-top: 1.5rem;
+            font-size: 0.95rem;
+        }
+
+        .footer-nav {
+            margin-top: 3rem;
+            padding-top: 1rem;
+            border-top: 1px solid #ddd;
+            display: flex;
+            justify-content: space-between;
+        }
+
+        .btn {
+            padding: 0.6rem 1.2rem;
+            background: var(--primary-color);
+            color: white;
+            text-decoration: none;
+            border-radius: 4px;
+        }
+
+        .btn-secondary { background: #666; }
+    </style>
+</head>
+<body>
+
+<nav>
+    <a href="../index.html">← Volver al Índice Principal</a>
+</nav>
+
+<div class="content-container">
+    <header>
+        <p><strong>Unidad 4</strong> > Tema 1: Fundamentos de Política de seguridad</p>
+        <h1>Subtema 2: Diseño de Políticas de Seguridad</h1>
+    </header>
+
+    <section>
+        <h2>Importancia del Diseño</h2>
+        <div class="importance-box">
+            <p>
+                Las políticas tienen múltiples aplicaciones: son herramientas cruciales en momentos de crisis, necesarias para el cumplimiento normativo y vitales para proteger secretos comerciales. 
+            </p>
+            <p>
+                <strong>Diferencia clave:</strong> La política establece el <em>qué</em> (objetivos y directrices), mientras que la implementación o el procedimiento detallan el <em>cómo</em> técnico.
+            </p>
+        </div>
+        
+        <p>
+            La participación de la <strong>Dirección</strong> en su elaboración es vital para transmitir un mensaje claro de compromiso e implicación con la seguridad ante toda la organización.
+        </p>
+
+        <div class="legal-note">
+            <strong>Beneficio Legal:</strong> Las políticas documentadas son esenciales en disputas legales. Si se sanciona a un empleado por una infracción de seguridad sin una política escrita que lo respalde, justificar la acción ante la ley resulta complicado.
+        </div>
+    </section>
+
+    <section>
+        <h2>Esquema de un Diseño de Política</h2>
+        <p>Para realizar un diseño correcto, se debe seguir este esquema estructural:</p>
+
+        <div class="scheme-container">
+            <!-- 1. Propósito -->
+            <div class="scheme-step">
+                <div class="step-number">1</div>
+                <div class="step-content">
+                    <h3>Propósito</h3>
+                    <p>Justificación clara de los objetivos: qué se pretende controlar o qué riesgos específicos se quieren mitigar (ej: detección de vulnerabilidades web).</p>
+                </div>
+            </div>
+
+            <!-- 2. Ámbito -->
+            <div class="scheme-step">
+                <div class="step-number">2</div>
+                <div class="step-content">
+                    <h3>Ámbito</h3>
+                    <p>Define a qué procesos específicos se aplica la política (ej: desarrollo de software) y cuál es su alcance dentro de la organización.</p>
+                </div>
+            </div>
+
+            <!-- 3. Descripción -->
+            <div class="scheme-step">
+                <div class="step-number">3</div>
+                <div class="step-content">
+                    <h3>Descripción de la política</h3>
+                    <p>Detalla cuándo realizar las acciones, su duración, las herramientas necesarias para llevarlas a cabo y cómo expresar los resultados.</p>
+                </div>
+            </div>
+
+            <!-- 4. Responsabilidades -->
+            <div class="scheme-step">
+                <div class="step-number">4</div>
+                <div class="step-content">
+                    <h3>Responsabilidades</h3>
+                    <p>Especifica quién es el responsable de hacer cumplir la política (ej: personal de seguridad, todos los empleados en el caso del correo electrónico).</p>
+                </div>
+            </div>
+
+            <!-- 5. Adicionales -->
+            <div class="scheme-step">
+                <div class="step-number">5</div>
+                <div class="step-content">
+                    <h3>Adicionales</h3>
+                    <p>Incluye definiciones para clarificar contenido, referencias externas y un mecanismo de seguimiento de versiones para garantizar vigencia.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <div class="footer-nav">
+        <a href="u4-t1-s1.html" class="btn btn-secondary">← Anterior: Introducción</a>
+        <a href="u4-t1-s3.html" class="btn">Siguiente: Elementos de una política →</a>
+    </div>
+</div>
+
+<footer>
+    <p style="text-align: center; color: #888; margin-bottom: 2rem;">Asignatura: SGSI | UNEMI</p>
+</footer>
+
+</body>
+</html>

@@ -1,0 +1,193 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>U3 - Subtema 2: Matemáticas discretas - SGSI</title>
+    <link rel="icon" type="image/svg+xml" href="../favicon_sgsi.svg">
+    <style>
+        :root {
+            --primary-color: #003366;
+            --secondary-color: #f39c12;
+            --bg-light: #f4f7f6;
+            --text-dark: #333;
+            --math-blue: #34495e;
+        }
+
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            line-height: 1.6;
+            margin: 0;
+            background-color: var(--bg-light);
+            color: var(--text-dark);
+        }
+
+        nav {
+            background-color: var(--primary-color);
+            padding: 1rem 10%;
+        }
+
+        nav a {
+            color: white;
+            text-decoration: none;
+            font-weight: bold;
+        }
+
+        .content-container {
+            width: 75%;
+            margin: 2rem auto;
+            background: white;
+            padding: 3rem;
+            border-radius: 8px;
+            box-shadow: 0 4px 10px rgba(0,0,0,0.1);
+        }
+
+        h1 {
+            color: var(--primary-color);
+            border-left: 5px solid var(--secondary-color);
+            padding-left: 15px;
+        }
+
+        h2 {
+            color: var(--primary-color);
+            border-bottom: 2px solid #eee;
+            padding-bottom: 10px;
+            margin-top: 2rem;
+        }
+
+        .formula-box {
+            background: #2c3e50;
+            color: #ecf0f1;
+            padding: 1.5rem;
+            text-align: center;
+            border-radius: 8px;
+            font-family: 'Courier New', Courier, monospace;
+            font-size: 1.4rem;
+            margin: 2rem 0;
+        }
+
+        .example-box {
+            background-color: #f0f4f8;
+            border-left: 5px solid var(--primary-color);
+            padding: 1.5rem;
+            margin: 1.5rem 0;
+        }
+
+        .math-concept {
+            font-weight: bold;
+            color: #c0392b;
+        }
+
+        /* Estilo para tablas de multiplicar modulares */
+        .mod-table {
+            width: 100%;
+            border-collapse: collapse;
+            margin: 1rem 0;
+            text-align: center;
+        }
+
+        .mod-table td, .mod-table th {
+            border: 1px solid #ccc;
+            padding: 8px;
+        }
+
+        .highlight-res {
+            background-color: #f39c12;
+            color: white;
+            font-weight: bold;
+        }
+
+        .footer-nav {
+            margin-top: 3rem;
+            padding-top: 1rem;
+            border-top: 1px solid #ddd;
+            display: flex;
+            justify-content: space-between;
+        }
+
+        .btn {
+            padding: 0.6rem 1.2rem;
+            background: var(--primary-color);
+            color: white;
+            text-decoration: none;
+            border-radius: 4px;
+        }
+
+        .btn-secondary { background: #666; }
+    </style>
+</head>
+<body>
+
+<nav>
+    <a href="../index.html">← Volver al Índice Principal</a>
+</nav>
+
+<div class="content-container">
+    <header>
+        <p><strong>Unidad 3</strong> > Tema 1: Fundamentos de Criptografía</p>
+        <h1>Subtema 2: Matemáticas discretas</h1>
+    </header>
+
+    <section>
+        <h2>Introducción</h2>
+        <p>
+            La aritmética modular es la herramienta principal para desarrollar algoritmos de cifrado. En criptografía, trabajamos dentro de un <span class="math-concept">cuerpo finito</span>, donde las operaciones se realizan bajo un módulo <em>n</em>.
+        </p>
+        <div class="formula-box">
+            a mod n = b
+        </div>
+    </section>
+
+    <section>
+        <h2>Conceptos Fundamentales</h2>
+        
+        <h3>1. Zona Canónica</h3>
+        <p>Los restos de un número <em>n</em> siempre van desde <strong>0 hasta n-1</strong>. Por ejemplo, en módulo 13, el resto 5 tiene una clase de equivalencia que incluye números como -21, -8, 18 y 31.</p>
+
+        <h3>2. Inverso Aditivo</h3>
+        <p>Es el número que, sumado a otro, da como resultado el elemento neutro (0) en el módulo correspondiente.</p>
+        <div class="example-box">
+            <strong>Ejemplo:</strong> En módulo 27, el inverso aditivo de 12 es 15. <br>
+            <em>Porque:</em> 12 + 15 = 27 ≡ 0 (mod 27).
+        </div>
+
+        <h3>3. El operador XOR (OR Exclusivo)</h3>
+        <p>Muy utilizado en cifrado de bits. Es una función <span class="math-concept">involutiva</span>, lo que significa que el inverso de un valor bajo XOR es el mismo valor. Es la base de algoritmos modernos como IDEA.</p>
+    </section>
+
+    <section>
+        <h2>Inverso Multiplicativo</h2>
+        <p>
+            Es fundamental para la criptografía asimétrica. Para que un número <em>a</em> tenga inverso en módulo <em>n</em>, debe cumplirse que sean <strong>primos relativos</strong>:
+        </p>
+        <div class="formula-box">
+            mcd(a, n) = 1
+        </div>
+
+        <div class="example-box">
+            <strong>Caso Práctico (Cifrado Afín):</strong> <br>
+            Buscamos el inverso de 3 en módulo 10. <br>
+            Multiplicamos 3 por todos los restos hasta encontrar el que da 1:
+            <table class="mod-table">
+                <tr><th>Operación</th><td>3*0</td><td>3*1</td><td>3*2</td><td>3*3</td><td>3*4</td><td>3*5</td><td>3*6</td><th class="highlight-res">3*7</th><td>3*8</td><td>3*9</td></tr>
+                <tr><th>Resultado mod 10</th><td>0</td><td>3</td><td>6</td><td>9</td><td>2</td><td>5</td><td>8</td><th class="highlight-res">1</th><td>4</td><td>7</td></tr>
+            </table>
+            <em>Conclusión:</em> El inverso de 3 en mod 10 es <strong>7</strong>.
+        </div>
+        <p>
+            <em>Nota:</em> Para números grandes, se utiliza el <strong>Algoritmo Extendido de Euclides (AEE)</strong>.
+        </p>
+    </section>
+
+    <div class="footer-nav">
+        <a href="u3-t1-s1.html" class="btn btn-secondary">← Anterior: Seguridad y Criptografía</a>
+        <a href="u3-t1-s3.html" class="btn">Siguiente: Problemas matemáticos →</a>
+    </div>
+</div>
+
+<footer>
+    <p style="text-align: center; color: #888; margin-bottom: 2rem;">Asignatura: SGSI | UNEMI</p>
+</footer>
+
+</body>
+</html>

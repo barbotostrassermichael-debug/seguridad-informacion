@@ -1,0 +1,205 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>U2 - Subtema 2: La Gestión de Riesgo - SGSI</title>
+    <link rel="icon" type="image/svg+xml" href="../favicon_sgsi.svg">
+    <style>
+        :root {
+            --primary-color: #003366;
+            --secondary-color: #f39c12;
+            --bg-light: #f4f7f6;
+            --text-dark: #333;
+            --hazard-red: #e74c3c;
+        }
+
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            line-height: 1.6;
+            margin: 0;
+            background-color: var(--bg-light);
+            color: var(--text-dark);
+        }
+
+        nav {
+            background-color: var(--primary-color);
+            padding: 1rem 10%;
+        }
+
+        nav a {
+            color: white;
+            text-decoration: none;
+            font-weight: bold;
+        }
+
+        .content-container {
+            width: 75%;
+            margin: 2rem auto;
+            background: white;
+            padding: 3rem;
+            border-radius: 8px;
+            box-shadow: 0 4px 10px rgba(0,0,0,0.1);
+        }
+
+        h1 {
+            color: var(--primary-color);
+            border-left: 5px solid var(--secondary-color);
+            padding-left: 15px;
+        }
+
+        h2 {
+            color: var(--primary-color);
+            border-bottom: 2px solid #eee;
+            padding-bottom: 10px;
+            margin-top: 2rem;
+        }
+
+        .decision-box {
+            display: flex;
+            gap: 15px;
+            margin: 2rem 0;
+        }
+
+        .decision-item {
+            flex: 1;
+            background: #fff8e1;
+            padding: 1rem;
+            border: 1px solid #ffe082;
+            border-radius: 8px;
+            text-align: center;
+            font-weight: bold;
+        }
+
+        /* Glosario técnico */
+        .glossary {
+            background: #fdfefe;
+            border: 1px solid #ddd;
+            border-radius: 8px;
+            padding: 1.5rem;
+            margin: 2rem 0;
+        }
+
+        .glossary-term {
+            margin-bottom: 1.5rem;
+        }
+
+        .glossary-term strong {
+            color: var(--hazard-red);
+            font-size: 1.1rem;
+            display: block;
+        }
+
+        /* Controles */
+        .control-types {
+            background: #e8f4f8;
+            padding: 1.5rem;
+            border-radius: 8px;
+        }
+
+        .footer-nav {
+            margin-top: 3rem;
+            padding-top: 1rem;
+            border-top: 1px solid #ddd;
+            display: flex;
+            justify-content: space-between;
+        }
+
+        .btn {
+            padding: 0.6rem 1.2rem;
+            background: var(--primary-color);
+            color: white;
+            text-decoration: none;
+            border-radius: 4px;
+        }
+
+        .btn-secondary { background: #666; }
+    </style>
+</head>
+<body>
+
+<nav>
+    <a href="../index.html">← Volver al Índice Principal</a>
+</nav>
+
+<div class="content-container">
+    <header>
+        <p><strong>Unidad 2</strong> > Tema 2: Gestión de Riesgos</p>
+        <h1>Subtema 2: La Gestión de Riesgo</h1>
+    </header>
+
+    <section>
+        <h2>Toma de Decisiones sobre el Riesgo</h2>
+        <p>
+            Un riesgo se refiere a la posibilidad de que ocurra un evento no deseado con consecuencias negativas. Según Sánchez L. (2020), existen tres decisiones principales que se pueden tomar:
+        </p>
+
+        <div class="decision-box">
+            <div class="decision-item">1. Asumir el riesgo tal cual</div>
+            <div class="decision-item">2. Mitigar mediante acciones</div>
+            <div class="decision-item">3. Externalizar o transferir</div>
+        </div>
+
+        <p>
+            <em>Nota:</em> Una alternativa adicional es <strong>evitar el riesgo completamente</strong>, aunque esto puede implicar la pérdida de oportunidades de negocio.
+        </p>
+    </section>
+
+    <section>
+        <h2>Definiciones Importantes</h2>
+        <p>Para evitar confusiones en la gestión, el compendio establece la siguiente terminología (basada en ISO 17799):</p>
+        
+        <div class="glossary">
+            <div class="glossary-term">
+                <strong>Amenaza (Threat)</strong>
+                Un peligro potencial a un recurso.
+            </div>
+            <div class="glossary-term">
+                <strong>Fuente/Agente de la amenaza</strong>
+                Algo o alguien que tiene la capacidad potencial para materializar una amenaza.
+            </div>
+            <div class="glossary-term">
+                <strong>Vulnerabilidad</strong>
+                Una debilidad o fallo en un recurso.
+            </div>
+            <div class="glossary-term">
+                <strong>Exposición</strong>
+                Una oportunidad para que una amenaza cause un daño.
+            </div>
+        </div>
+    </section>
+
+    <section>
+        <h2>Categorías de Controles</h2>
+        <p>Los mecanismos de mitigación se dividen en:</p>
+        <div class="control-types">
+            <ul>
+                <li><strong>Técnicos:</strong> Ejemplos: firewalls, cifrado.</li>
+                <li><strong>No técnicos:</strong> Administrativos (políticas) y Físicos (alarmas, cerraduras).</li>
+                <li><strong>Salvaguardas:</strong> Controles preventivos y proactivos.</li>
+                <li><strong>Contramedidas:</strong> Controles correctivos o reactivos.</li>
+            </ul>
+        </div>
+    </section>
+
+    <section>
+        <h2>Etapas del Proceso (NIST SP-800)</h2>
+        <ol>
+            <li><strong>Evaluación del riesgo (Risk Assessment):</strong> Incluye análisis cuantitativo (monetario) y cualitativo (escenarios).</li>
+            <li><strong>Implementación de controles.</strong></li>
+            <li><strong>Evaluación continua de los controles.</strong></li>
+        </ol>
+    </section>
+
+    <div class="footer-nav">
+        <a href="u2-t2-s1.html" class="btn btn-secondary">← Anterior: Conceptualización</a>
+        <a href="u2-t2-s3.html" class="btn">Siguiente: Principios y Directrices →</a>
+    </div>
+</div>
+
+<footer>
+    <p style="text-align: center; color: #888; margin-bottom: 2rem;">Asignatura: SGSI | UNEMI</p>
+</footer>
+
+</body>
+</html>

@@ -1,0 +1,207 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>SGSI - Sistema de Gestión de la Seguridad de la Información</title>
+    <link rel="icon" type="image/svg+xml" href="../favicon_sgsi.svg">
+    <style>
+        :root {
+            --primary-color: #003366; /* Azul UNEMI */
+            --secondary-color: #f39c12; /* Naranja acento */
+            --bg-light: #f4f7f6;
+            --text-dark: #333;
+        }
+
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            line-height: 1.6;
+            margin: 0;
+            background-color: var(--bg-light);
+            color: var(--text-dark);
+        }
+
+        header {
+            background-color: var(--primary-color);
+            color: white;
+            padding: 2rem 10%;
+            text-align: center;
+            border-bottom: 5px solid var(--secondary-color);
+        }
+
+        .container {
+            width: 80%;
+            margin: 2rem auto;
+            background: white;
+            padding: 2rem;
+            border-radius: 8px;
+            box-shadow: 0 4px 6px rgba(0,0,0,0.1);
+        }
+
+        .download-box {
+            background: #e7eff3;
+            padding: 1.5rem;
+            border-radius: 5px;
+            text-align: center;
+            margin-bottom: 2rem;
+        }
+
+        .btn-download {
+            background-color: var(--secondary-color);
+            color: white;
+            padding: 0.8rem 1.5rem;
+            text-decoration: none;
+            font-weight: bold;
+            border-radius: 4px;
+            transition: background 0.3s;
+        }
+
+        .btn-download:hover {
+            background-color: #e67e22;
+        }
+
+        .unit-card {
+            margin-bottom: 1.5rem;
+            border: 1px solid #ddd;
+            border-radius: 5px;
+            overflow: hidden;
+        }
+
+        .unit-header {
+            background-color: #eee;
+            padding: 1rem;
+            font-weight: bold;
+            color: var(--primary-color);
+            cursor: pointer;
+        }
+
+        .theme-list {
+            padding: 1rem 2rem;
+            list-style: none;
+        }
+
+        .subtema-link {
+            display: block;
+            padding: 0.3rem 0;
+            color: #555;
+            text-decoration: none;
+            transition: color 0.2s;
+        }
+
+        .subtema-link:hover {
+            color: var(--secondary-color);
+            text-decoration: underline;
+        }
+
+        .theme-title {
+            font-weight: bold;
+            margin-top: 1rem;
+            color: #444;
+            border-bottom: 1px solid #eee;
+        }
+
+        footer {
+            text-align: center;
+            padding: 2rem;
+            font-size: 0.9rem;
+            color: #777;
+        }
+    </style>
+</head>
+<body>
+
+<header>
+    <h1>Sistema de Gestión de la Seguridad de la Información</h1>
+    <p>Compendio Académico de Autor - UNEMI</p>
+</header>
+
+<div class="container">
+    
+    <section class="download-box">
+        <h2>Material de Estudio</h2>
+        <p>Descarga el compendio completo en formato PDF para lectura offline.</p>
+        <a href="SGSI – Compendios.pdf" class="btn-download" download>
+            📄 Descargar PDF "SGSI – Compendios"
+        </a>
+    </section>
+
+    <h2>Contenido del Curso</h2>
+    <p>Selecciona un tema para ver el contenido detallado:</p>
+
+    <!-- UNIDAD 1 -->
+    <div class="unit-card">
+        <div class="unit-header">Unidad 1: El Sistema de Gestión de la Seguridad de la Información y la norma ISO 27001</div>
+        <ul class="theme-list">
+            <li class="theme-title">Tema 1: La seguridad de la información</li>
+            <li><a class="subtema-link" href="unidades/u1-t1-s1.html">Subtema 1: Introducción</a></li>
+            <li><a class="subtema-link" href="unidades/u1-t1-s2.html">Subtema 2: Principios de la seguridad</a></li>
+            <li><a class="subtema-link" href="unidades/u1-t1-s3.html">Subtema 3: La seguridad en el ámbito económico</a></li>
+            <li><a class="subtema-link" href="unidades/u1-t1-s4.html">Subtema 4: La seguridad física y lógica</a></li>
+            
+            <li class="theme-title">Tema 2: La norma ISO 27001</li>
+            <li><a class="subtema-link" href="unidades/u1-t2-s1.html">Subtema 1: Gobierno de la seguridad de la información</a></li>
+            <li><a class="subtema-link" href="unidades/u1-t2-s2.html">Subtema 2: El estándar ISO 27001</a></li>
+            <li><a class="subtema-link" href="unidades/u1-t2-s3.html">Subtema 3: Buenas prácticas en gestión de servicios de TI</a></li>
+            <li><a class="subtema-link" href="unidades/u1-t2-s4.html">Subtema 4: El estándar ISO 22301</a></li>
+        </ul>
+    </div>
+
+    <!-- UNIDAD 2 -->
+    <div class="unit-card">
+        <div class="unit-header">Unidad 2: Análisis y Gestión de Riesgos</div>
+        <ul class="theme-list">
+            <li class="theme-title">Tema 1: Análisis de Riesgos</li>
+            <li><a class="subtema-link" href="unidades/u2-t1-s1.html">Subtema 1: Introducción</a></li>
+            <li><a class="subtema-link" href="unidades/u2-t1-s2.html">Subtema 2: Clasificación de la Información</a></li>
+            <li><a class="subtema-link" href="unidades/u2-t1-s3.html">Subtema 3: Control de seguridad</a></li>
+            <li><a class="subtema-link" href="unidades/u2-t1-s4.html">Subtema 4: Tipos de análisis de Riesgos</a></li>
+            
+            <li class="theme-title">Tema 2: Gestión de Riesgos</li>
+            <li><a class="subtema-link" href="unidades/u2-t2-s1.html">Subtema 1: Introducción</a></li>
+            <li><a class="subtema-link" href="unidades/u2-t2-s2.html">Subtema 2: La Gestión de Riesgo</a></li>
+            <li><a class="subtema-link" href="unidades/u2-t2-s3.html">Subtema 3: Principios y Directrices</a></li>
+        </ul>
+    </div>
+
+    <!-- UNIDAD 3 -->
+    <div class="unit-card">
+        <div class="unit-header">Unidad 3: Criptografía Clásica y Criptografía Moderna</div>
+        <ul class="theme-list">
+            <li class="theme-title">Tema 1: Fundamentos de Criptografía</li>
+            <li><a class="subtema-link" href="unidades/u3-t1-s1.html">Subtema 1: Seguridad y Criptografía</a></li>
+            <li><a class="subtema-link" href="unidades/u3-t1-s2.html">Subtema 2: Matemáticas discretas</a></li>
+            <li><a class="subtema-link" href="unidades/u3-t1-s3.html">Subtema 3: Uso de problemas matemáticos</a></li>
+            <li><a class="subtema-link" href="unidades/u3-t1-s4.html">Subtema 4: Seguridad de algoritmos</a></li>
+            
+            <li class="theme-title">Tema 2: Cifrado Clásico y Moderno</li>
+            <li><a class="subtema-link" href="unidades/u3-t2-s1.html">Subtema 1: Clasificación de sistemas</a></li>
+            <li><a class="subtema-link" href="unidades/u3-t2-s2.html">Subtema 2: Cifrado por permutación</a></li>
+            <li><a class="subtema-link" href="unidades/u3-t2-s3.html">Subtema 3: Cifrado Moderno</a></li>
+        </ul>
+    </div>
+
+    <!-- UNIDAD 4 -->
+    <div class="unit-card">
+        <div class="unit-header">Unidad 4: Políticas de seguridad</div>
+        <ul class="theme-list">
+            <li class="theme-title">Tema 1: Fundamentos de Política de seguridad</li>
+            <li><a class="subtema-link" href="unidades/u4-t1-s1.html">Subtema 1: Introducción</a></li>
+            <li><a class="subtema-link" href="unidades/u4-t1-s2.html">Subtema 2: Diseño de Políticas</a></li>
+            <li><a class="subtema-link" href="unidades/u4-t1-s3.html">Subtema 3: Elementos de una política</a></li>
+            <li><a class="subtema-link" href="unidades/u4-t1-s4.html">Subtema 4: Buenas prácticas</a></li>
+            
+            <li class="theme-title">Tema 2: La Gestión de la Seguridad como profesión</li>
+            <li><a class="subtema-link" href="unidades/u4-t2-s1.html">Subtema 1: Campo profesional</a></li>
+            <li><a class="subtema-link" href="unidades/u4-t2-s2.html">Subtema 2: Funciones del profesional</a></li>
+            <li><a class="subtema-link" href="unidades/u4-t2-s3.html">Subtema 3: Certificaciones Profesionales</a></li>
+        </ul>
+    </div>
+
+</div>
+
+<footer>
+    <p>&copy; 2026 Universidad Estatal de Milagro - Gestión de Seguridad de la Información</p>
+</footer>
+
+</body>
+</html>

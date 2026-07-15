@@ -1,0 +1,190 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>U3 - Subtema 3: Uso de problemas matemáticos - SGSI</title>
+    <link rel="icon" type="image/svg+xml" href="../favicon_sgsi.svg">
+    <style>
+        :root {
+            --primary-color: #003366;
+            --secondary-color: #f39c12;
+            --bg-light: #f4f7f6;
+            --text-dark: #333;
+            --math-dark: #2c3e50;
+        }
+
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            line-height: 1.6;
+            margin: 0;
+            background-color: var(--bg-light);
+            color: var(--text-dark);
+        }
+
+        nav {
+            background-color: var(--primary-color);
+            padding: 1rem 10%;
+        }
+
+        nav a {
+            color: white;
+            text-decoration: none;
+            font-weight: bold;
+        }
+
+        .content-container {
+            width: 75%;
+            margin: 2rem auto;
+            background: white;
+            padding: 3rem;
+            border-radius: 8px;
+            box-shadow: 0 4px 10px rgba(0,0,0,0.1);
+        }
+
+        h1 {
+            color: var(--primary-color);
+            border-left: 5px solid var(--secondary-color);
+            padding-left: 15px;
+        }
+
+        h2 {
+            color: var(--primary-color);
+            border-bottom: 2px solid #eee;
+            padding-bottom: 10px;
+            margin-top: 2rem;
+        }
+
+        .concept-card {
+            background: #fff;
+            border: 1px solid #ddd;
+            padding: 1.5rem;
+            border-radius: 8px;
+            margin: 1.5rem 0;
+            border-top: 4px solid var(--secondary-color);
+        }
+
+        .formula-container {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 20px;
+            margin: 1.5rem 0;
+        }
+
+        .formula-item {
+            background: var(--math-dark);
+            color: #fff;
+            padding: 1rem;
+            border-radius: 8px;
+            text-align: center;
+        }
+
+        .formula-item span {
+            display: block;
+            font-family: 'Courier New', Courier, monospace;
+            font-size: 1.2rem;
+            margin-bottom: 5px;
+        }
+
+        .complexity-info {
+            background-color: #eef2f3;
+            padding: 1rem;
+            border-radius: 5px;
+            font-style: italic;
+            border-left: 4px solid var(--primary-color);
+        }
+
+        .footer-nav {
+            margin-top: 3rem;
+            padding-top: 1rem;
+            border-top: 1px solid #ddd;
+            display: flex;
+            justify-content: space-between;
+        }
+
+        .btn {
+            padding: 0.6rem 1.2rem;
+            background: var(--primary-color);
+            color: white;
+            text-decoration: none;
+            border-radius: 4px;
+        }
+
+        .btn-secondary { background: #666; }
+    </style>
+</head>
+<body>
+
+<nav>
+    <a href="../index.html">← Volver al Índice Principal</a>
+</nav>
+
+<div class="content-container">
+    <header>
+        <p><strong>Unidad 3</strong> > Tema 1: Fundamentos de Criptografía</p>
+        <h1>Subtema 3: Uso de problemas matemáticos</h1>
+    </header>
+
+    <section>
+        <h2>Funciones de un Solo Sentido</h2>
+        <p>
+            Existen problemas matemáticos que son fáciles de calcular en una dirección pero extremadamente difíciles de revertir. A esto se le conoce como comportamiento <strong>no polinomial o exponencial</strong>.
+        </p>
+        <div class="complexity-info">
+            "El tiempo de resolución aumenta de manera exponencial en relación al tamaño de los datos de entrada."
+        </div>
+    </section>
+
+    <section>
+        <h2>1. Problema del Logaritmo Discreto (PLD)</h2>
+        <p>
+            Es la base de la seguridad del intercambio de claves <strong>Diffie-Hellman</strong>.
+        </p>
+        
+        <div class="formula-container">
+            <div class="formula-item">
+                <small>Directo (Fácil y Rápido)</small>
+                <span>y = α<sup>x</sup> mod p</span>
+            </div>
+            <div class="formula-item">
+                <small>Inverso (Difícil y Lento)</small>
+                <span>x = log<sub>α</sub> y mod p</span>
+            </div>
+        </div>
+
+        <p>
+            Si se utiliza un número primo <em>p</em> lo suficientemente grande, la búsqueda del valor <em>x</em> se vuelve <strong>intratable</strong> para la capacidad de cómputo actual.
+        </p>
+    </section>
+
+    <section>
+        <div class="concept-card">
+            <h2>2. Problema de Factorización Entera (PFE)</h2>
+            <p>
+                Este problema establece que es muy sencillo multiplicar dos números primos grandes (p * q = n), pero es extremadamente difícil encontrar los factores primos originales partiendo solo del resultado <em>n</em>.
+            </p>
+            <p>
+                Al igual que el PLD, su resolución se vuelve imposible mediante fuerza bruta cuando los números se acercan a los <strong>1,000 bits</strong>.
+            </p>
+        </div>
+    </section>
+
+    <section>
+        <h2>Límites de la Fuerza Bruta</h2>
+        <p>
+            Según Ramió (2020), aunque existen algoritmos de ataque como la "Criba de Eratóstenes" para la factorización, estos consumen demasiado tiempo y recursos. Los algoritmos modernos superan estas capacidades cuando la longitud de la clave es adecuada, protegiendo la información transmitida.
+        </p>
+    </section>
+
+    <div class="footer-nav">
+        <a href="u3-t1-s2.html" class="btn btn-secondary">← Anterior: Matemáticas discretas</a>
+        <a href="u3-t1-s4.html" class="btn">Siguiente: Seguridad de algoritmos →</a>
+    </div>
+</div>
+
+<footer>
+    <p style="text-align: center; color: #888; margin-bottom: 2rem;">Asignatura: SGSI | UNEMI</p>
+</footer>
+
+</body>
+</html>

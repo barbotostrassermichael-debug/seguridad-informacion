@@ -1,0 +1,203 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>U1 - Subtema 1: Gobierno de la seguridad de la información - SGSI</title>
+    <link rel="icon" type="image/svg+xml" href="../favicon_sgsi.svg">
+    <style>
+        :root {
+            --primary-color: #003366;
+            --secondary-color: #f39c12;
+            --bg-light: #f4f7f6;
+            --text-dark: #333;
+            --accent-blue: #3498db;
+        }
+
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            line-height: 1.6;
+            margin: 0;
+            background-color: var(--bg-light);
+            color: var(--text-dark);
+        }
+
+        nav {
+            background-color: var(--primary-color);
+            padding: 1rem 10%;
+        }
+
+        nav a {
+            color: white;
+            text-decoration: none;
+            font-weight: bold;
+        }
+
+        .content-container {
+            width: 75%;
+            margin: 2rem auto;
+            background: white;
+            padding: 3rem;
+            border-radius: 8px;
+            box-shadow: 0 4px 10px rgba(0,0,0,0.1);
+        }
+
+        h1 {
+            color: var(--primary-color);
+            border-left: 5px solid var(--secondary-color);
+            padding-left: 15px;
+        }
+
+        h2 {
+            color: var(--primary-color);
+            border-bottom: 2px solid #eee;
+            padding-bottom: 10px;
+            margin-top: 2.5rem;
+        }
+
+        .definition-box {
+            background-color: #eef7ff;
+            border-left: 5px solid var(--accent-blue);
+            padding: 1.5rem;
+            margin: 1.5rem 0;
+        }
+
+        .strategic-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 20px;
+            margin: 2rem 0;
+        }
+
+        .strategic-card {
+            background: #fff;
+            border: 1px solid #ddd;
+            padding: 1.5rem;
+            border-radius: 8px;
+            box-shadow: 0 2px 4px rgba(0,0,0,0.05);
+        }
+
+        .strategic-card h3 {
+            margin-top: 0;
+            color: var(--secondary-color);
+        }
+
+        /* Fases del Plan Director */
+        .phases-container {
+            background: #f9f9f9;
+            padding: 2rem;
+            border-radius: 8px;
+            border: 1px dashed #ccc;
+        }
+
+        .phase-item {
+            display: flex;
+            align-items: center;
+            margin-bottom: 10px;
+        }
+
+        .phase-number {
+            background: var(--primary-color);
+            color: white;
+            width: 30px;
+            height: 30px;
+            border-radius: 50%;
+            text-align: center;
+            line-height: 30px;
+            margin-right: 15px;
+            flex-shrink: 0;
+        }
+
+        .footer-nav {
+            margin-top: 3rem;
+            padding-top: 1rem;
+            border-top: 1px solid #ddd;
+            display: flex;
+            justify-content: space-between;
+        }
+
+        .btn {
+            padding: 0.6rem 1.2rem;
+            background: var(--primary-color);
+            color: white;
+            text-decoration: none;
+            border-radius: 4px;
+        }
+
+        .btn-secondary { background: #666; }
+    </style>
+</head>
+<body>
+
+<nav>
+    <a href="../index.html">← Volver al Índice Principal</a>
+</nav>
+
+<div class="content-container">
+    <header>
+        <p><strong>Unidad 1</strong> > Tema 2: La norma ISO 27001</p>
+        <h1>Subtema 1: Gobierno de la seguridad de la información</h1>
+    </header>
+
+    <section>
+        <h2>¿Qué es el Gobierno de Seguridad?</h2>
+        <p>Según Sánchez L. (2020), el gobierno es el conjunto de responsabilidades y prácticas ejercidas por la <strong>Dirección</strong> para brindar orientación estratégica y asegurar que los objetivos se logren.</p>
+        
+        <div class="definition-box">
+            "El gobierno de la seguridad de la información se focaliza en integrar la seguridad con la estrategia empresarial para respaldar los objetivos de la organización y administrar los riesgos de forma apropiada."
+        </div>
+    </section>
+
+    <section>
+        <h2>Misión, Visión y Estrategia</h2>
+        <p>Al igual que el gobierno corporativo, la seguridad debe estar alineada con los fundamentos estratégicos:</p>
+        
+        <div class="strategic-grid">
+            <div class="strategic-card">
+                <h3>Misión</h3>
+                <p>Descripción de por qué la seguridad es relevante para la entidad. Es una realidad invariable en el tiempo que sirve de contexto para la toma de decisiones.</p>
+            </div>
+            <div class="strategic-card">
+                <h3>Visión</h3>
+                <p>Describe lo que la entidad desea que llegue a ser la seguridad de la información, sirviendo de guía para la definición de la estrategia.</p>
+            </div>
+            <div class="strategic-card">
+                <h3>Estrategia</h3>
+                <p>Se revisa periódicamente debido a los cambios del entorno. Define cómo la seguridad da valor a la entidad y cómo se reducen los riesgos y costes.</p>
+            </div>
+        </div>
+    </section>
+
+    <section>
+        <h2>El Plan Director de Seguridad (PDS)</h2>
+        <p>
+            Es el instrumento esencial para establecer la estrategia de seguridad en un periodo determinado, generalmente entre <strong>2 y 5 años</strong>.
+        </p>
+        
+        <div class="phases-container">
+            <h3>Fases del Plan Director:</h3>
+            <div class="phase-item"><div class="phase-number">1</div> Definición de un modelo de seguridad.</div>
+            <div class="phase-item"><div class="phase-number">2</div> Análisis de la situación actual.</div>
+            <div class="phase-item"><div class="phase-number">3</div> Realización de un análisis GAP (brechas).</div>
+            <div class="phase-item"><div class="phase-number">4</div> Definición del plan de acción (proyectos y priorización).</div>
+            <div class="phase-item"><div class="phase-number">5</div> Aprobación y desarrollo del PDS.</div>
+            <div class="phase-item"><div class="phase-number">6</div> Seguimiento del plan y objetivos.</div>
+        </div>
+        
+        <p style="margin-top: 1rem; font-size: 0.9rem; color: #666;">
+            * El plan de proyectos debe considerar siempre los recursos, el presupuesto y la tecnología disponible.
+        </p>
+    </section>
+
+    <div class="footer-nav">
+        <a href="u1-t1-s4.html" class="btn btn-secondary">← Anterior: Seguridad Física y Lógica</a>
+        <a href="u1-t2-s2.html" class="btn">Siguiente: El estándar ISO 27001 →</a>
+    </div>
+</div>
+
+<footer>
+    <p style="text-align: center; color: #888; margin-bottom: 2rem;">Asignatura: SGSI | UNEMI</p>
+</footer>
+
+</body>
+</html>

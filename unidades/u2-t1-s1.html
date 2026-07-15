@@ -1,0 +1,196 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>U2 - Subtema 1: Introducción al Análisis de Riesgo - SGSI</title>
+    <link rel="icon" type="image/svg+xml" href="../favicon_sgsi.svg">
+    <style>
+        :root {
+            --primary-color: #003366;
+            --secondary-color: #f39c12;
+            --bg-light: #f4f7f6;
+            --text-dark: #333;
+            --risk-red: #c0392b;
+        }
+
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            line-height: 1.6;
+            margin: 0;
+            background-color: var(--bg-light);
+            color: var(--text-dark);
+        }
+
+        nav {
+            background-color: var(--primary-color);
+            padding: 1rem 10%;
+        }
+
+        nav a {
+            color: white;
+            text-decoration: none;
+            font-weight: bold;
+        }
+
+        .content-container {
+            width: 75%;
+            margin: 2rem auto;
+            background: white;
+            padding: 3rem;
+            border-radius: 8px;
+            box-shadow: 0 4px 10px rgba(0,0,0,0.1);
+        }
+
+        h1 {
+            color: var(--primary-color);
+            border-left: 5px solid var(--secondary-color);
+            padding-left: 15px;
+        }
+
+        h2 {
+            color: var(--primary-color);
+            border-bottom: 2px solid #eee;
+            padding-bottom: 10px;
+            margin-top: 2.5rem;
+        }
+
+        .highlight-box {
+            background-color: #fdf2f2;
+            border-left: 5px solid var(--risk-red);
+            padding: 1.5rem;
+            margin: 1.5rem 0;
+        }
+
+        .question-grid {
+            display: grid;
+            grid-template-columns: repeat(2, 1fr);
+            gap: 15px;
+            margin: 1.5rem 0;
+        }
+
+        .question-item {
+            background: #e8eff1;
+            padding: 1rem;
+            border-radius: 5px;
+            text-align: center;
+            font-weight: bold;
+            color: var(--primary-color);
+        }
+
+        .formula-box {
+            background: #2c3e50;
+            color: #ecf0f1;
+            padding: 1.5rem;
+            text-align: center;
+            border-radius: 8px;
+            font-size: 1.3rem;
+            margin: 2rem 0;
+        }
+
+        .treatment-options {
+            list-style: none;
+            padding: 0;
+        }
+
+        .treatment-options li {
+            background: #fff;
+            border: 1px solid #ddd;
+            margin-bottom: 8px;
+            padding: 10px 15px;
+            border-radius: 4px;
+            border-left: 4px solid var(--secondary-color);
+        }
+
+        .footer-nav {
+            margin-top: 3rem;
+            padding-top: 1rem;
+            border-top: 1px solid #ddd;
+            display: flex;
+            justify-content: space-between;
+        }
+
+        .btn {
+            padding: 0.6rem 1.2rem;
+            background: var(--primary-color);
+            color: white;
+            text-decoration: none;
+            border-radius: 4px;
+        }
+
+        .btn-secondary { background: #666; }
+    </style>
+</head>
+<body>
+
+<nav>
+    <a href="../index.html">← Volver al Índice Principal</a>
+</nav>
+
+<div class="content-container">
+    <header>
+        <p><strong>Unidad 2:</strong> Análisis y Gestión de Riesgos</p>
+        <h1>Subtema 1: Introducción y Conceptualización</h1>
+    </header>
+
+    <section>
+        <h2>El Valor de la Información</h2>
+        <p>
+            La protección de la información es un objetivo crucial, ya que es uno de los activos más valiosos de cualquier organización. Con el crecimiento de las TIC, el número de amenazas ha aumentado, elevando la probabilidad de incidentes.
+        </p>
+        <p>Antes de implementar protecciones, debemos responder a cuatro preguntas esenciales:</p>
+        <div class="question-grid">
+            <div class="question-item">¿Qué información proteger?</div>
+            <div class="question-item">¿Dónde está almacenada?</div>
+            <div class="question-item">¿Cómo se protegerá?</div>
+            <div class="question-item">¿Cuándo se protegerá?</div>
+        </div>
+    </section>
+
+    <section>
+        <h2>¿Qué es el Análisis de Riesgo?</h2>
+        <p>
+            Es la actividad que conlleva la adquisición de conocimiento y comprensión sobre los posibles riesgos. Sirve para evaluar la necesidad de abordarlos y determinar las estrategias más adecuadas.
+        </p>
+        
+        <div class="highlight-box">
+            <strong>Componentes del Análisis:</strong>
+            <ul>
+                <li><strong>Comunicación de riesgos:</strong> Intercambio de información.</li>
+                <li><strong>Evaluación de riesgos:</strong> Identificación de peligros.</li>
+                <li><strong>Gestión de riesgos:</strong> Políticas y decisiones.</li>
+            </ul>
+        </div>
+
+        <h3>La Ecuación del Riesgo</h3>
+        <p>Para determinar el nivel de riesgo, se utiliza la siguiente lógica:</p>
+        <div class="formula-box">
+            Riesgo = Probabilidad de Amenaza × Magnitud de Daño (Impacto)
+        </div>
+    </section>
+
+    <section>
+        <h2>Tratamiento del Riesgo</h2>
+        <p>Una vez identificado y evaluado el riesgo, la organización debe decidir cómo actuar. Según Sánchez L. (2020), las opciones incluyen:</p>
+        <ul class="treatment-options">
+            <li><strong>Evitar:</strong> Decidir no iniciar o continuar la actividad que causa el riesgo.</li>
+            <li><strong>Aceptar o aumentar:</strong> Para perseguir una oportunidad (si el beneficio es mayor).</li>
+            <li><strong>Eliminar:</strong> Suprimir la fuente del riesgo.</li>
+            <li><strong>Modificar:</strong> Cambiar la probabilidad o las consecuencias.</li>
+            <li><strong>Compartir:</strong> Transferir el riesgo (ej. mediante contratos o seguros).</li>
+            <li><strong>Retener:</strong> Mantener el riesgo basándose en una decisión informada.</li>
+        </ul>
+    </section>
+
+    <div class="footer-nav">
+        <a href="../index.html" class="btn btn-secondary">← Inicio</a>
+        <a href="u2-t1-s2.html" class="btn">Siguiente: Clasificación de Información →</a>
+    </div>
+</div>
+
+<footer>
+    <p style="text-align: center; color: #888; margin-bottom: 2rem;">Asignatura: SGSI | UNEMI</p>
+</footer>
+
+</body>
+</html>

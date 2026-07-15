@@ -1,0 +1,203 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>U2 - Subtema 3: Principios y Directrices (ISO 31000) - SGSI</title>
+    <link rel="icon" type="image/svg+xml" href="../favicon_sgsi.svg">
+    <style>
+        :root {
+            --primary-color: #003366;
+            --secondary-color: #f39c12;
+            --bg-light: #f4f7f6;
+            --text-dark: #333;
+            --iso-green: #16a085;
+        }
+
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            line-height: 1.6;
+            margin: 0;
+            background-color: var(--bg-light);
+            color: var(--text-dark);
+        }
+
+        nav {
+            background-color: var(--primary-color);
+            padding: 1rem 10%;
+        }
+
+        nav a {
+            color: white;
+            text-decoration: none;
+            font-weight: bold;
+        }
+
+        .content-container {
+            width: 75%;
+            margin: 2rem auto;
+            background: white;
+            padding: 3rem;
+            border-radius: 8px;
+            box-shadow: 0 4px 10px rgba(0,0,0,0.1);
+        }
+
+        h1 {
+            color: var(--primary-color);
+            border-left: 5px solid var(--secondary-color);
+            padding-left: 15px;
+        }
+
+        h2 {
+            color: var(--primary-color);
+            border-bottom: 2px solid #eee;
+            padding-bottom: 10px;
+            margin-top: 2rem;
+        }
+
+        .iso-intro {
+            background-color: #e8f6f3;
+            border-left: 5px solid var(--iso-green);
+            padding: 1.5rem;
+            margin: 1.5rem 0;
+        }
+
+        /* Lista de Beneficios */
+        .benefits-list {
+            columns: 2;
+            -webkit-columns: 2;
+            -moz-columns: 2;
+            list-style-type: square;
+            font-size: 0.9rem;
+            padding-left: 20px;
+        }
+
+        /* Ciclo de Gestión */
+        .framework-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(180px, 1fr));
+            gap: 10px;
+            margin: 2rem 0;
+        }
+
+        .framework-step {
+            background: #fff;
+            border: 2px solid var(--iso-green);
+            padding: 1rem;
+            border-radius: 8px;
+            text-align: center;
+            font-weight: bold;
+            color: var(--iso-green);
+        }
+
+        .principles-box {
+            background: #2c3e50;
+            color: white;
+            padding: 2rem;
+            border-radius: 8px;
+            margin: 2rem 0;
+        }
+
+        .principles-box ul {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 10px;
+        }
+
+        .footer-nav {
+            margin-top: 3rem;
+            padding-top: 1rem;
+            border-top: 1px solid #ddd;
+            display: flex;
+            justify-content: space-between;
+        }
+
+        .btn {
+            padding: 0.6rem 1.2rem;
+            background: var(--primary-color);
+            color: white;
+            text-decoration: none;
+            border-radius: 4px;
+        }
+
+        .btn-secondary { background: #666; }
+        .btn-success { background: #27ae60; font-weight: bold; }
+    </style>
+</head>
+<body>
+
+<nav>
+    <a href="../index.html">← Volver al Índice Principal</a>
+</nav>
+
+<div class="content-container">
+    <header>
+        <p><strong>Unidad 2</strong> > Tema 2: Gestión de Riesgos</p>
+        <h1>Subtema 3: Principios y Directrices (ISO 31000)</h1>
+    </header>
+
+    <section>
+        <h2>Norma UNE-ISO 31000</h2>
+        <div class="iso-intro">
+            <p>
+                Esta norma ofrece a las organizaciones una herramienta para manejar la <strong>incertidumbre</strong> que surge de factores internos y externos. Define el "riesgo" como la posible influencia negativa que la incertidumbre tiene en la capacidad de alcanzar los objetivos.
+            </p>
+        </div>
+        
+        <h3>Beneficios de su implementación:</h3>
+        <ul class="benefits-list">
+            <li>Aumentar la probabilidad de éxito.</li>
+            <li>Fomentar gestión proactiva.</li>
+            <li>Mejorar la identificación de oportunidades.</li>
+            <li>Cumplir requisitos legales.</li>
+            <li>Mejorar la confianza de partes interesadas.</li>
+            <li>Establecer base fiable para decisiones.</li>
+            <li>Minimizar pérdidas.</li>
+            <li>Mejorar la resiliencia.</li>
+        </ul>
+    </section>
+
+    <section class="principles-box">
+        <h3>Los 8 Principios (ISO 31000:2018)</h3>
+        <p>Su objetivo principal es la <strong>creación y protección del valor</strong>:</p>
+        <ul>
+            <li>1. Integrada</li>
+            <li>2. Estructurada y exhaustiva</li>
+            <li>3. Adaptada</li>
+            <li>4. Inclusiva</li>
+            <li>5. Dinámica</li>
+            <li>6. Mejor información disponible</li>
+            <li>7. Factores humanos y culturales</li>
+            <li>8. Mejora continua</li>
+        </ul>
+    </section>
+
+    <section>
+        <h2>Marco Referencial (Framework)</h2>
+        <p>El capítulo 5 de la norma establece que la gestión de riesgos debe integrarse mediante estas fases:</p>
+        
+        <div class="framework-grid">
+            <div class="framework-step">Integración</div>
+            <div class="framework-step">Diseño</div>
+            <div class="framework-step">Implementación</div>
+            <div class="framework-step">Valoración</div>
+            <div class="framework-step">Mejora</div>
+        </div>
+
+        <p>
+            <strong>Liderazgo y Compromiso:</strong> Es el núcleo del marco referencial. La dirección debe asegurar que la gestión del riesgo no esté separada del propósito y la gobernanza de la organización.
+        </p>
+    </section>
+
+    <div class="footer-nav">
+        <a href="u2-t2-s2.html" class="btn btn-secondary">← Anterior: La Gestión de Riesgo</a>
+        <a href="../index.html" class="btn btn-success">Finalizar Unidad 2: Volver al Inicio</a>
+    </div>
+</div>
+
+<footer>
+    <p style="text-align: center; color: #888; margin-bottom: 2rem;">Asignatura: SGSI | UNEMI</p>
+</footer>
+
+</body>
+</html>

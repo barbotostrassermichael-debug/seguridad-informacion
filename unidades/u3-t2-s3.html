@@ -1,0 +1,203 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>U3 - Subtema 3: Cifrado Moderno - SGSI</title>
+    <link rel="icon" type="image/svg+xml" href="../favicon_sgsi.svg">
+    <style>
+        :root {
+            --primary-color: #003366;
+            --secondary-color: #f39c12;
+            --bg-light: #f4f7f6;
+            --text-dark: #333;
+            --block-color: #2980b9;
+            --stream-color: #16a085;
+        }
+
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            line-height: 1.6;
+            margin: 0;
+            background-color: var(--bg-light);
+            color: var(--text-dark);
+        }
+
+        nav {
+            background-color: var(--primary-color);
+            padding: 1rem 10%;
+        }
+
+        nav a {
+            color: white;
+            text-decoration: none;
+            font-weight: bold;
+        }
+
+        .content-container {
+            width: 80%;
+            margin: 2rem auto;
+            background: white;
+            padding: 3rem;
+            border-radius: 8px;
+            box-shadow: 0 4px 10px rgba(0,0,0,0.1);
+        }
+
+        h1 {
+            color: var(--primary-color);
+            border-left: 5px solid var(--secondary-color);
+            padding-left: 15px;
+        }
+
+        h2 {
+            color: var(--primary-color);
+            border-bottom: 2px solid #eee;
+            padding-bottom: 10px;
+            margin-top: 2rem;
+        }
+
+        .intro-modern {
+            background: #fdfefe;
+            border: 1px solid #ddd;
+            padding: 1.5rem;
+            border-radius: 8px;
+            margin-bottom: 2rem;
+        }
+
+        /* Comparativa Flujo vs Bloque */
+        .modern-grid {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 20px;
+            margin: 2rem 0;
+        }
+
+        .modern-card {
+            padding: 1.5rem;
+            border-radius: 8px;
+            color: white;
+        }
+
+        .flujo { background-color: var(--stream-color); }
+        .bloque { background-color: var(--block-color); }
+
+        .modern-card h3 { margin-top: 0; text-transform: uppercase; border-bottom: 1px solid rgba(255,255,255,0.3); padding-bottom: 5px; }
+
+        .tech-box {
+            background-color: #e8f4f8;
+            border-left: 5px solid var(--primary-color);
+            padding: 1.5rem;
+            margin: 1.5rem 0;
+        }
+
+        .hex-code {
+            font-family: 'Courier New', Courier, monospace;
+            background: #2c3e50;
+            color: #2ecc71;
+            padding: 10px;
+            border-radius: 4px;
+            display: block;
+            margin: 10px 0;
+            font-size: 0.9rem;
+        }
+
+        .footer-nav {
+            margin-top: 3rem;
+            padding-top: 1rem;
+            border-top: 1px solid #ddd;
+            display: flex;
+            justify-content: space-between;
+        }
+
+        .btn {
+            padding: 0.6rem 1.2rem;
+            background: var(--primary-color);
+            color: white;
+            text-decoration: none;
+            border-radius: 4px;
+        }
+
+        .btn-secondary { background: #666; }
+        .btn-success { background: #27ae60; font-weight: bold; }
+    </style>
+</head>
+<body>
+
+<nav>
+    <a href="../index.html">← Volver al Índice Principal</a>
+</nav>
+
+<div class="content-container">
+    <header>
+        <p><strong>Unidad 3</strong> > Tema 2: Cifrado Clásico y Moderno</p>
+        <h1>Subtema 3: Cifrado Moderno</h1>
+    </header>
+
+    <section>
+        <h2>Del Carácter al Bit</h2>
+        <div class="intro-modern">
+            <p>
+                A diferencia de los sistemas clásicos, el cifrado moderno opera a nivel de <strong>bits o bytes</strong>. El texto en claro (archivos, documentos, imágenes) se expresa mediante el código <strong>ASCII de 256 caracteres</strong>.
+            </p>
+            <p>Debido a que muchos caracteres ASCII no son imprimibles, es común representar el criptograma en valores hexadecimales:</p>
+            <code class="hex-code">43 6f 6d 70 65 6e 64 69 6f 20 53 47 53 49 2e</code>
+        </div>
+    </section>
+
+    <section>
+        <h2>Principios Modernos</h2>
+        <p>
+            El principio de Kerckhoffs se mantiene: la seguridad depende de la <strong>imposibilidad computacional</strong> de descubrir la clave secreta, mientras que el algoritmo debe ser público. 
+        </p>
+        <p><em>Imposibilidad computacional:</em> Significa que, aunque el problema es matemáticamente resoluble, requeriría tantos recursos y tiempo que resulta imposible de abordar en la práctica.</p>
+    </section>
+
+    <section>
+        <h2>Métodos de Cifra Moderna</h2>
+        <div class="modern-grid">
+            <!-- Cifrado en Flujo -->
+            <div class="modern-card flujo">
+                <h3>Cifrado en Flujo</h3>
+                <p>Cifra bit a bit o byte a byte utilizando una secuencia cifrante generada a partir de una <strong>semilla (seed)</strong>.</p>
+                <ul>
+                    <li>Algoritmos: A5 (Telefonía), RC4 (Internet/WLAN).</li>
+                    <li>Utiliza la operación XOR.</li>
+                    <li>Operación involutiva (XOR descifra lo que XOR cifró).</li>
+                </ul>
+            </div>
+
+            <!-- Cifrado en Bloque -->
+            <div class="modern-card bloque">
+                <h3>Cifrado en Bloque</h3>
+                <p>Divide el mensaje en trozos fijos de <strong>64 o 128 bits</strong> y los cifra de forma independiente.</p>
+                <ul>
+                    <li>Algoritmos: DES, 3DES, AES, IDEA.</li>
+                    <li>Tamaño recomendado: 128 bits (rompe la estructura del lenguaje).</li>
+                    <li>Equilibrio entre rendimiento y seguridad.</li>
+                </ul>
+            </div>
+        </div>
+    </section>
+
+    <section>
+        <h2>Criptografía Simétrica vs. Asimétrica</h2>
+        <div class="tech-box">
+            <ul>
+                <li><strong>Criptografía Simétrica:</strong> Emisor y receptor comparten la misma clave secreta. Es rápida pero requiere un canal seguro para intercambiar la clave.</li>
+                <li><strong>Criptografía Asimétrica:</strong> Cada usuario tiene un par de claves (Pública y Privada). La pública cifra y la privada descifra. Ejemplos: RSA, Diffie-Hellman, ElGamal.</li>
+            </ul>
+        </div>
+    </section>
+
+    <div class="footer-nav">
+        <a href="u3-t2-s2.html" class="btn btn-secondary">← Anterior: Cifrado por permutación</a>
+        <a href="../index.html" class="btn btn-success">Finalizar Unidad 3: Volver al Inicio</a>
+    </div>
+</div>
+
+<footer>
+    <p style="text-align: center; color: #888; margin-bottom: 2rem;">Asignatura: SGSI | UNEMI</p>
+</footer>
+
+</body>
+</html>

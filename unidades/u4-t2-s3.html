@@ -1,0 +1,209 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>U4 - Subtema 3: Certificaciones Profesionales - SGSI</title>
+    <link rel="icon" type="image/svg+xml" href="../favicon_sgsi.svg">
+    <style>
+        :root {
+            --primary-color: #003366;
+            --secondary-color: #f39c12;
+            --bg-light: #f4f7f6;
+            --text-dark: #333;
+            --cert-gold: #d4af37;
+        }
+
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            line-height: 1.6;
+            margin: 0;
+            background-color: var(--bg-light);
+            color: var(--text-dark);
+        }
+
+        nav {
+            background-color: var(--primary-color);
+            padding: 1rem 10%;
+        }
+
+        nav a {
+            color: white;
+            text-decoration: none;
+            font-weight: bold;
+        }
+
+        .content-container {
+            width: 75%;
+            margin: 2rem auto;
+            background: white;
+            padding: 3rem;
+            border-radius: 8px;
+            box-shadow: 0 4px 10px rgba(0,0,0,0.1);
+        }
+
+        h1 {
+            color: var(--primary-color);
+            border-left: 5px solid var(--secondary-color);
+            padding-left: 15px;
+        }
+
+        h2 {
+            color: var(--primary-color);
+            border-bottom: 2px solid #eee;
+            padding-bottom: 10px;
+            margin-top: 2rem;
+        }
+
+        .intro-text {
+            background: #fdfefe;
+            padding: 1rem;
+            border: 1px solid #ddd;
+            font-style: italic;
+        }
+
+        /* Instituciones */
+        .org-grid {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 10px;
+            margin: 1.5rem 0;
+        }
+
+        .org-tag {
+            background: #34495e;
+            color: white;
+            padding: 5px 15px;
+            border-radius: 20px;
+            font-size: 0.9rem;
+            font-weight: bold;
+        }
+
+        /* Sección CISSP */
+        .cissp-box {
+            border: 2px solid var(--cert-gold);
+            padding: 2rem;
+            border-radius: 8px;
+            background-color: #fffdf0;
+            margin: 2rem 0;
+        }
+
+        .cissp-box h3 {
+            color: #996515;
+            margin-top: 0;
+            text-align: center;
+            font-size: 1.5rem;
+        }
+
+        .domains-list {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 10px;
+            margin-top: 1rem;
+        }
+
+        .domain-item {
+            background: white;
+            padding: 8px 12px;
+            border: 1px solid #eee;
+            font-size: 0.85rem;
+        }
+
+        .requirements-list {
+            background: #fff;
+            padding: 1.5rem;
+            border-radius: 8px;
+            border-left: 5px solid var(--secondary-color);
+            margin-top: 1.5rem;
+        }
+
+        .footer-nav {
+            margin-top: 3rem;
+            padding-top: 1rem;
+            border-top: 1px solid #ddd;
+            display: flex;
+            justify-content: space-between;
+        }
+
+        .btn {
+            padding: 0.6rem 1.2rem;
+            background: var(--primary-color);
+            color: white;
+            text-decoration: none;
+            border-radius: 4px;
+        }
+
+        .btn-secondary { background: #666; }
+        .btn-success { background: #27ae60; font-weight: bold; }
+    </style>
+</head>
+<body>
+
+<nav>
+    <a href="../index.html">← Volver al Índice Principal</a>
+</nav>
+
+<div class="content-container">
+    <header>
+        <p><strong>Unidad 4</strong> > Tema 2: La Seguridad como profesión</p>
+        <h1>Subtema 3: Certificaciones Profesionales</h1>
+    </header>
+
+    <section>
+        <h2>Importancia de las Certificaciones</h2>
+        <div class="intro-text">
+            "Las certificaciones han adquirido una gran importancia debido a la alta especialización requerida en el sector y la necesidad de demostrar habilidades específicas ante empleadores o clientes."
+        </div>
+        <p>
+            Existen diversas instituciones globales que promueven programas de educación constante e impulsan la formación de una comunidad profesional sólida:
+        </p>
+        <div class="org-grid">
+            <div class="org-tag">ISC²</div>
+            <div class="org-tag">ISACA</div>
+            <div class="org-tag">EC-Council</div>
+            <div class="org-tag">GIAC</div>
+        </div>
+    </section>
+
+    <section class="cissp-box">
+        <h3>Certificación CISSP de (ISC)²</h3>
+        <p>
+            La certificación <strong>Certified Information Systems Security Professional</strong> es altamente apreciada por su prestigio global. Capacita al profesional para definir la arquitectura, el diseño y los controles de los sistemas empresariales.
+        </p>
+        
+        <strong>Los 8 Dominios del CISSP (CBK):</strong>
+        <div class="domains-list">
+            <div class="domain-item">1. Gestión de seguridad y riesgo</div>
+            <div class="domain-item">2. Seguridad de los activos</div>
+            <div class="domain-item">3. Ingeniería de seguridad</div>
+            <div class="domain-item">4. Seguridad de comunicación y red</div>
+            <div class="domain-item">5. Gestión de identidades y accesos</div>
+            <div class="domain-item">6. Evaluación y prueba de seguridad</div>
+            <div class="domain-item">7. Operaciones de seguridad</div>
+            <div class="domain-item">8. Seguridad en desarrollo de software</div>
+        </div>
+    </section>
+
+    <section>
+        <h2>Requisitos para la Certificación</h2>
+        <div class="requirements-list">
+            <ul>
+                <li><strong>Aprobar el examen:</strong> Consta de 250 preguntas de selección múltiple con una duración de 6 horas.</li>
+                <li><strong>Experiencia:</strong> Demostrar una experiencia mínima de <strong>5 años</strong> en al menos dos de los dominios mencionados.</li>
+                <li><strong>Ética:</strong> Adherirse estrictamente al Código Ético de la (ISC)².</li>
+            </ul>
+        </div>
+    </section>
+
+    <div class="footer-nav">
+        <a href="u4-t2-s2.html" class="btn btn-secondary">← Anterior: Funciones Profesionales</a>
+        <a href="../index.html" class="btn btn-success">¡FINALIZAR CURSO!: Volver al Inicio</a>
+    </div>
+</div>
+
+<footer>
+    <p style="text-align: center; color: #888; margin-bottom: 2rem;">Asignatura: SGSI | UNEMI</p>
+</footer>
+
+</body>
+</html>

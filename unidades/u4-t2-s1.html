@@ -1,0 +1,195 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>U4 - Subtema 1: Campo Profesional - SGSI</title>
+    <link rel="icon" type="image/svg+xml" href="../favicon_sgsi.svg">
+    <style>
+        :root {
+            --primary-color: #003366;
+            --secondary-color: #f39c12;
+            --bg-light: #f4f7f6;
+            --text-dark: #333;
+            --hacker-green: #27ae60;
+        }
+
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            line-height: 1.6;
+            margin: 0;
+            background-color: var(--bg-light);
+            color: var(--text-dark);
+        }
+
+        nav {
+            background-color: var(--primary-color);
+            padding: 1rem 10%;
+        }
+
+        nav a {
+            color: white;
+            text-decoration: none;
+            font-weight: bold;
+        }
+
+        .content-container {
+            width: 75%;
+            margin: 2rem auto;
+            background: white;
+            padding: 3rem;
+            border-radius: 8px;
+            box-shadow: 0 4px 10px rgba(0,0,0,0.1);
+        }
+
+        h1 {
+            color: var(--primary-color);
+            border-left: 5px solid var(--secondary-color);
+            padding-left: 15px;
+        }
+
+        h2 {
+            color: var(--primary-color);
+            border-bottom: 2px solid #eee;
+            padding-bottom: 10px;
+            margin-top: 2rem;
+        }
+
+        /* Criterios de Profesión */
+        .criteria-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+            gap: 15px;
+            margin: 2rem 0;
+        }
+
+        .criteria-item {
+            background: #f8f9fa;
+            border: 1px solid #ddd;
+            padding: 1rem;
+            text-align: center;
+            border-radius: 5px;
+            font-weight: bold;
+            font-size: 0.9rem;
+        }
+
+        /* Hacking Ético */
+        .hacker-box {
+            background-color: #1a1a1a;
+            color: var(--hacker-green);
+            padding: 1.5rem;
+            border-radius: 8px;
+            font-family: 'Courier New', Courier, monospace;
+            margin: 2rem 0;
+            border-left: 5px solid var(--hacker-green);
+        }
+
+        /* Gestión de Incidentes */
+        .incident-phases {
+            background: #eef7ff;
+            padding: 1.5rem;
+            border-radius: 8px;
+            margin: 2rem 0;
+        }
+
+        /* Nuevos Entornos */
+        .env-card {
+            border: 1px solid #ddd;
+            padding: 1.5rem;
+            margin-bottom: 15px;
+            border-radius: 8px;
+        }
+
+        .env-card h3 {
+            margin-top: 0;
+            color: var(--secondary-color);
+        }
+
+        .footer-nav {
+            margin-top: 3rem;
+            padding-top: 1rem;
+            border-top: 1px solid #ddd;
+            display: flex;
+            justify-content: space-between;
+        }
+
+        .btn {
+            padding: 0.6rem 1.2rem;
+            background: var(--primary-color);
+            color: white;
+            text-decoration: none;
+            border-radius: 4px;
+        }
+
+        .btn-secondary { background: #666; }
+    </style>
+</head>
+<body>
+
+<nav>
+    <a href="../index.html">← Volver al Índice Principal</a>
+</nav>
+
+<div class="content-container">
+    <header>
+        <p><strong>Unidad 4</strong> > Tema 2: La Seguridad como profesión</p>
+        <h1>Subtema 1: La seguridad en el campo profesional</h1>
+    </header>
+
+    <section>
+        <h2>La Seguridad como Profesión</h2>
+        <p>Para caracterizar la seguridad de la información como una profesión en desarrollo, se utilizan cinco criterios fundamentales:</p>
+        <div class="criteria-grid">
+            <div class="criteria-item">Cuerpo organizado de conocimientos</div>
+            <div class="criteria-item">Reconocimiento de autoridad por clientes</div>
+            <div class="criteria-item">Aprobación de la comunidad</div>
+            <div class="criteria-item">Código de ética (ej: ISC²)</div>
+            <div class="criteria-item">Cultura profesional apoyada por academia</div>
+        </div>
+    </section>
+
+    <section>
+        <h2>¿El hacker como profesional?</h2>
+        <div class="hacker-box">
+            > HACKING ÉTICO: Identificación de vulnerabilidades mediante acciones ofensivas SIN motivaciones maliciosas.<br><br>
+            > El profesional colabora con las empresas para mejorar su seguridad a través de pruebas de penetración controladas.
+        </div>
+    </section>
+
+    <section>
+        <h2>Gestión de Incidentes de Seguridad</h2>
+        <p>Un incidente es un suceso no deseado con alta posibilidad de poner en peligro las dimensiones CIA. El proceso de respuesta se divide en fases:</p>
+        <div class="incident-phases">
+            <ol>
+                <li><strong>Planificación:</strong> Crear un plan basado en gravedad y categorías, definiendo una taxonomía.</li>
+                <li><strong>Detección y Análisis:</strong> Validar incidentes potenciales y asignar criticidad.</li>
+                <li><strong>Contención, Erradicación y Recuperación:</strong> Reducir el impacto y restablecer operaciones.</li>
+                <li><strong>Actividades Post-incidente:</strong> Investigación exhaustiva para identificar causas raíz y mejorar.</li>
+            </ol>
+        </div>
+    </section>
+
+    <section>
+        <h2>Gestión en Nuevos Entornos</h2>
+        <div class="env-card">
+            <h3>La Nube (Cloud Computing)</h3>
+            <p>Modelos: SaaS, PaaS, IaaS. Riesgos: Pérdida de control directo, dependencia del proveedor y exposición por apertura de puertas externas.</p>
+        </div>
+        <div class="env-card">
+            <h3>Movilidad (BYOD)</h3>
+            <p>El uso de dispositivos personales (Bring Your Own Device) aumenta el riesgo de pérdida o robo. Solución: Contenedores corporativos aislados y geolocalización.</p>
+        </div>
+    </section>
+
+    <div class="footer-nav">
+        <a href="u4-t1-s4.html" class="btn btn-secondary">← Anterior: Buenas Prácticas</a>
+        <a href="u4-t2-s2.html" class="btn">Siguiente: Funciones del Profesional →</a>
+    </div>
+</div>
+
+<footer>
+    <p style="text-align: center; color: #888; margin-bottom: 2rem;">Asignatura: SGSI | UNEMI</p>
+</footer>
+
+</body>
+</html>

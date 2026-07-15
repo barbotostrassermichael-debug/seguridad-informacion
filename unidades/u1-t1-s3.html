@@ -1,0 +1,212 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>U1 - Subtema 3: La seguridad en el ámbito económico - SGSI</title>
+    <link rel="icon" type="image/svg+xml" href="../favicon_sgsi.svg">
+    <style>
+        :root {
+            --primary-color: #003366;
+            --secondary-color: #f39c12;
+            --bg-light: #f4f7f6;
+            --text-dark: #333;
+            --money-green: #2ecc71;
+        }
+
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            line-height: 1.6;
+            margin: 0;
+            background-color: var(--bg-light);
+            color: var(--text-dark);
+        }
+
+        nav {
+            background-color: var(--primary-color);
+            padding: 1rem 10%;
+        }
+
+        nav a {
+            color: white;
+            text-decoration: none;
+            font-weight: bold;
+        }
+
+        .content-container {
+            width: 75%;
+            margin: 2rem auto;
+            background: white;
+            padding: 3rem;
+            border-radius: 8px;
+            box-shadow: 0 4px 10px rgba(0,0,0,0.1);
+        }
+
+        h1 {
+            color: var(--primary-color);
+            border-left: 5px solid var(--secondary-color);
+            padding-left: 15px;
+        }
+
+        h2 {
+            color: var(--primary-color);
+            border-bottom: 2px solid #eee;
+            padding-bottom: 10px;
+            margin-top: 2.5rem;
+        }
+
+        .balance-box {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            background: #e8f4fd;
+            padding: 2rem;
+            border-radius: 8px;
+            margin: 2rem 0;
+            text-align: center;
+        }
+
+        .balance-item {
+            flex: 1;
+            font-weight: bold;
+            font-size: 1.2rem;
+        }
+
+        .vs-circle {
+            background: var(--secondary-color);
+            color: white;
+            width: 50px;
+            height: 50px;
+            line-height: 50px;
+            border-radius: 50%;
+            margin: 0 20px;
+        }
+
+        .info-asset-box {
+            border: 2px solid var(--money-green);
+            padding: 1.5rem;
+            border-radius: 8px;
+            background-color: #f0fff4;
+        }
+
+        .questions-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+            gap: 15px;
+            margin-top: 1.5rem;
+        }
+
+        .question-card {
+            background: #fff;
+            border: 1px solid #ddd;
+            padding: 1rem;
+            border-top: 4px solid var(--primary-color);
+            text-align: center;
+        }
+
+        .footer-nav {
+            margin-top: 3rem;
+            padding-top: 1rem;
+            border-top: 1px solid #ddd;
+            display: flex;
+            justify-content: space-between;
+        }
+
+        .btn {
+            padding: 0.6rem 1.2rem;
+            background: var(--primary-color);
+            color: white;
+            text-decoration: none;
+            border-radius: 4px;
+        }
+
+        .btn-secondary {
+            background: #666;
+        }
+    </style>
+</head>
+<body>
+
+<nav>
+    <a href="../index.html">← Volver al Índice Principal</a>
+</nav>
+
+<div class="content-container">
+    <header>
+        <p><strong>Unidad 1</strong> > Tema 1</p>
+        <h1>Subtema 3: La seguridad en el ámbito económico</h1>
+    </header>
+
+    <section>
+        <h2>Introducción y Equilibrio</h2>
+        <p>
+            Históricamente, muchas empresas no dan importancia a la seguridad hasta que sufren un ataque o robo de información. Para evitar pérdidas económicas, la gestión debe buscar un <strong>punto de equilibrio óptimo</strong>.
+        </p>
+
+        <div class="balance-box">
+            <div class="balance-item" style="color: var(--primary-color);">Coste de la Seguridad (Defensa)</div>
+            <div class="vs-circle">VS</div>
+            <div class="balance-item" style="color: #c0392b;">Impacto Económico de Riesgos</div>
+        </div>
+    </section>
+
+    <section>
+        <h2>La Información como Activo de Capital</h2>
+        <div class="info-asset-box">
+            <p>
+                La información es un <strong>activo valioso e irrecuperable</strong>. Si cae en manos de la competencia o personas malintencionadas, puede destruir la economía y el desarrollo de una empresa.
+            </p>
+        </div>
+        <p>
+            El análisis de coste-beneficio es simple: Si el coste de perder la información es mayor que el coste de protegerla, la implementación de seguridad es obligatoria y se convierte en una <strong>inversión</strong>, no en un gasto.
+        </p>
+    </section>
+
+    <section>
+        <h2>Interrogantes Clave para el Análisis</h2>
+        <p>Para cuantificar el nivel de seguridad necesario, debemos responder:</p>
+        
+        <div class="questions-grid">
+            <div class="question-card">
+                <strong>¿Qué se protege?</strong>
+                <p>Confidencialidad, Integridad y Disponibilidad.</p>
+            </div>
+            <div class="question-card">
+                <strong>¿De qué activos?</strong>
+                <p>De los clasificados como valiosos para el negocio.</p>
+            </div>
+            <div class="question-card">
+                <strong>¿Por qué medios?</strong>
+                <p>Controles, políticas, estándares y procedimientos.</p>
+            </div>
+        </div>
+    </section>
+
+    <section>
+        <h2>ROSI: Retorno de Inversión en Seguridad</h2>
+        <p>
+            El compendio introduce el concepto de <strong>ROSI (Return on Security Investment)</strong>. Aunque es difícil de medir por la complejidad de evaluar amenazas, el modelo económico considera varios tipos de costos:
+        </p>
+        <ul>
+            <li><strong>Coste de ruptura:</strong> El costo de quebrar la seguridad.</li>
+            <li><strong>Coste de protección:</strong> Lo que invertimos en mitigar vulnerabilidades.</li>
+            <li><strong>Pérdida de beneficio inmediata:</strong> Ingresos perdidos por el incidente.</li>
+            <li><strong>Coste de reconstrucción:</strong> Lo que cuesta volver a la normalidad.</li>
+        </ul>
+        <p style="color: #c0392b; font-weight: bold;">
+            Nota importante: El factor humano (Ingeniería Social) es a menudo el eslabón más débil, sin importar cuánto dinero se invierta en tecnología.
+        </p>
+    </section>
+
+    <div class="footer-nav">
+        <a href="u1-t1-s2.html" class="btn btn-secondary">← Anterior: Principios de la seguridad</a>
+        <a href="u1-t1-s4.html" class="btn">Siguiente: Seguridad física y lógica →</a>
+    </div>
+</div>
+
+<footer>
+    <p style="text-align: center; color: #888; margin-bottom: 2rem;">Asignatura: SGSI | UNEMI</p>
+</footer>
+
+</body>
+</html>

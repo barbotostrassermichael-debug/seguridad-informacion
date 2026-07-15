@@ -1,0 +1,211 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>U3 - Subtema 1: Seguridad y Criptografía - SGSI</title>
+    <link rel="icon" type="image/svg+xml" href="../favicon_sgsi.svg">
+    <style>
+        :root {
+            --primary-color: #003366;
+            --secondary-color: #f39c12;
+            --bg-light: #f4f7f6;
+            --text-dark: #333;
+            --crypto-purple: #9b59b6;
+        }
+
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            line-height: 1.6;
+            margin: 0;
+            background-color: var(--bg-light);
+            color: var(--text-dark);
+        }
+
+        nav {
+            background-color: var(--primary-color);
+            padding: 1rem 10%;
+        }
+
+        nav a {
+            color: white;
+            text-decoration: none;
+            font-weight: bold;
+        }
+
+        .content-container {
+            width: 75%;
+            margin: 2rem auto;
+            background: white;
+            padding: 3rem;
+            border-radius: 8px;
+            box-shadow: 0 4px 10px rgba(0,0,0,0.1);
+        }
+
+        h1 {
+            color: var(--primary-color);
+            border-left: 5px solid var(--secondary-color);
+            padding-left: 15px;
+        }
+
+        h2 {
+            color: var(--primary-color);
+            border-bottom: 2px solid #eee;
+            padding-bottom: 10px;
+            margin-top: 2rem;
+        }
+
+        /* Esquema Criptosistema */
+        .crypto-schema {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            gap: 20px;
+            background: #f0f3f4;
+            padding: 2rem;
+            border-radius: 8px;
+            margin: 2rem 0;
+            font-weight: bold;
+        }
+
+        .crypto-box {
+            border: 2px solid var(--primary-color);
+            padding: 10px 20px;
+            background: white;
+            border-radius: 4px;
+        }
+
+        /* Difusión y Confusión */
+        .principles-grid {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 20px;
+            margin: 2rem 0;
+        }
+
+        .principle-card {
+            padding: 1.5rem;
+            border-radius: 8px;
+            border-top: 5px solid var(--crypto-purple);
+            background: #f4f0f7;
+        }
+
+        /* Milestones */
+        .milestones {
+            border-left: 3px solid var(--secondary-color);
+            padding-left: 20px;
+            margin: 2rem 0;
+        }
+
+        .milestone-item {
+            margin-bottom: 15px;
+        }
+
+        .milestone-item strong {
+            color: var(--primary-color);
+        }
+
+        .footer-nav {
+            margin-top: 3rem;
+            padding-top: 1rem;
+            border-top: 1px solid #ddd;
+            display: flex;
+            justify-content: space-between;
+        }
+
+        .btn {
+            padding: 0.6rem 1.2rem;
+            background: var(--primary-color);
+            color: white;
+            text-decoration: none;
+            border-radius: 4px;
+        }
+
+        .btn-secondary { background: #666; }
+    </style>
+</head>
+<body>
+
+<nav>
+    <a href="../index.html">← Volver al Índice Principal</a>
+</nav>
+
+<div class="content-container">
+    <header>
+        <p><strong>Unidad 3</strong> > Tema 1: Fundamentos de Criptografía</p>
+        <h1>Subtema 1: Seguridad y Criptografía</h1>
+    </header>
+
+    <section>
+        <h2>Orígenes y Fundamentos</h2>
+        <p>
+            Desde el inicio de la escritura, el ser humano ha buscado proteger información delicada. El origen técnico se remonta al siglo V a.C. con la <strong>"escítala"</strong>, un artefacto utilizado por los espartanos para salvaguardar secretos militares.
+        </p>
+    </section>
+
+    <section>
+        <h2>Elementos del Criptosistema</h2>
+        <p>Según Ramió (2020), un criptosistema es un conjunto de elementos que permiten cifrar y descifrar información:</p>
+        
+        <div class="crypto-schema">
+            <div>M <br><small>(Mensaje en claro)</small></div>
+            <span>→</span>
+            <div class="crypto-box">E (Cifrado) <br><small>Clave K</small></div>
+            <span>→</span>
+            <div>C <br><small>(Criptograma)</small></div>
+            <span>→</span>
+            <div class="crypto-box">D (Descifrado) <br><small>Clave K</small></div>
+            <span>→</span>
+            <div>M <br><small>(Mensaje original)</small></div>
+        </div>
+
+        <ul>
+            <li><strong>M:</strong> Mensaje o texto en claro, legible e interpretable.</li>
+            <li><strong>C:</strong> Criptograma o texto cifrado (inseguro por definición).</li>
+            <li><strong>E:</strong> Función de cifrado (Encrypt).</li>
+            <li><strong>D:</strong> Función de descifrado (Decrypt).</li>
+            <li><strong>K:</strong> Clave empleada para las funciones E y D.</li>
+        </ul>
+    </section>
+
+    <section>
+        <h2>Principios Fundamentales</h2>
+        <div class="principles-grid">
+            <div class="principle-card">
+                <h3>Difusión</h3>
+                <p>Propaga las propiedades del texto original a lo largo de todo el criptograma para ocultar la relación entre ambos. Se logra mediante <strong>transposición o permutación</strong>.</p>
+            </div>
+            <div class="principle-card">
+                <h3>Confusión</h3>
+                <p>Busca confundir al atacante para que no pueda establecer una relación entre la clave K y el criptograma C. Se logra mediante técnicas de <strong>sustitución</strong>.</p>
+            </div>
+        </div>
+    </section>
+
+    <section>
+        <h2>Hitos de la Criptografía Moderna</h2>
+        <div class="milestones">
+            <div class="milestone-item">
+                <strong>1948-1949:</strong> Claude Shannon publica las bases de la teoría de la información y el secreto de los sistemas.
+            </div>
+            <div class="milestone-item">
+                <strong>1974:</strong> Publicación del estándar <strong>DES</strong> (Data Encryption Standard), el primer algoritmo de uso civil masivo.
+            </div>
+            <div class="milestone-item">
+                <strong>1976:</strong> Nacimiento de la <strong>criptografía de clave pública</strong> (Diffie y Hellman), permitiendo el intercambio de claves en medios inseguros.
+            </div>
+        </div>
+    </section>
+
+    <div class="footer-nav">
+        <a href="../index.html" class="btn btn-secondary">← Inicio</a>
+        <a href="u3-t1-s2.html" class="btn">Siguiente: Matemáticas discretas →</a>
+    </div>
+</div>
+
+<footer>
+    <p style="text-align: center; color: #888; margin-bottom: 2rem;">Asignatura: SGSI | UNEMI</p>
+</footer>
+
+</body>
+</html>

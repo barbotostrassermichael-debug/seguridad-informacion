@@ -1,0 +1,221 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>U1 - Subtema 2: El estándar ISO 27001 - SGSI</title>
+    <link rel="icon" type="image/svg+xml" href="../favicon_sgsi.svg">
+    <style>
+        :root {
+            --primary-color: #003366;
+            --secondary-color: #f39c12;
+            --bg-light: #f4f7f6;
+            --text-dark: #333;
+            --iso-blue: #2980b9;
+        }
+
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            line-height: 1.6;
+            margin: 0;
+            background-color: var(--bg-light);
+            color: var(--text-dark);
+        }
+
+        nav {
+            background-color: var(--primary-color);
+            padding: 1rem 10%;
+        }
+
+        nav a {
+            color: white;
+            text-decoration: none;
+            font-weight: bold;
+        }
+
+        .content-container {
+            width: 80%;
+            margin: 2rem auto;
+            background: white;
+            padding: 3rem;
+            border-radius: 8px;
+            box-shadow: 0 4px 10px rgba(0,0,0,0.1);
+        }
+
+        h1 {
+            color: var(--primary-color);
+            border-left: 5px solid var(--secondary-color);
+            padding-left: 15px;
+        }
+
+        h2 {
+            color: var(--primary-color);
+            border-bottom: 2px solid #eee;
+            padding-bottom: 10px;
+            margin-top: 2.5rem;
+        }
+
+        /* Estilo para tablas */
+        table {
+            width: 100%;
+            border-collapse: collapse;
+            margin: 1.5rem 0;
+        }
+
+        table, th, td {
+            border: 1px solid #ddd;
+        }
+
+        th {
+            background-color: var(--primary-color);
+            color: white;
+            padding: 12px;
+            text-align: left;
+        }
+
+        td {
+            padding: 10px;
+        }
+
+        tr:nth-child(even) { background-color: #f2f2f2; }
+
+        /* Cuadros de la familia ISO */
+        .iso-family {
+            background: #e8f4f8;
+            padding: 1.5rem;
+            border-radius: 8px;
+            border: 1px solid var(--iso-blue);
+        }
+
+        /* PDCA */
+        .pdca-container {
+            display: grid;
+            grid-template-columns: repeat(2, 1fr);
+            gap: 15px;
+            margin: 2rem 0;
+        }
+
+        .pdca-box {
+            padding: 1rem;
+            border-radius: 8px;
+            color: white;
+            text-align: center;
+            font-weight: bold;
+        }
+
+        .plan { background-color: #2980b9; }
+        .do   { background-color: #27ae60; }
+        .check{ background-color: #f39c12; }
+        .act  { background-color: #c0392b; }
+
+        .footer-nav {
+            margin-top: 3rem;
+            padding-top: 1rem;
+            border-top: 1px solid #ddd;
+            display: flex;
+            justify-content: space-between;
+        }
+
+        .btn {
+            padding: 0.6rem 1.2rem;
+            background: var(--primary-color);
+            color: white;
+            text-decoration: none;
+            border-radius: 4px;
+        }
+
+        .btn-secondary { background: #666; }
+    </style>
+</head>
+<body>
+
+<nav>
+    <a href="../index.html">← Volver al Índice Principal</a>
+</nav>
+
+<div class="content-container">
+    <header>
+        <p><strong>Unidad 1</strong> > Tema 2: La norma ISO 27001</p>
+        <h1>Subtema 2: El estándar ISO 27001</h1>
+    </header>
+
+    <section>
+        <h2>Introducción al Estándar</h2>
+        <p>
+            La norma <strong>UNE-ISO/IEC 27001:2013</strong> es la más importante de la familia ISO 27000. Establece los requisitos necesarios para implementar, mantener y mejorar un <strong>Sistema de Gestión de la Seguridad de la Información (SGSI)</strong>. Es la única norma de la familia que es certificable.
+        </p>
+    </section>
+
+    <section>
+        <h2>La Familia ISO 27000</h2>
+        <div class="iso-family">
+            <ul>
+                <li><strong>ISO 27001:</strong> Requerimientos del SGSI (Certificable).</li>
+                <li><strong>ISO 27002:</strong> Guía de buenas prácticas (14 dominios, 35 objetivos de control, 114 controles). No es certificable.</li>
+                <li><strong>ISO 27003:</strong> Guía de implementación del SGSI.</li>
+                <li><strong>ISO 27004:</strong> Métricas y mediciones.</li>
+                <li><strong>ISO 27005:</strong> Gestión del riesgo en el SGSI.</li>
+            </ul>
+        </div>
+    </section>
+
+    <section>
+        <h2>Estructura de la Norma ISO 27001</h2>
+        <table>
+            <thead>
+                <tr>
+                    <th>Capítulo</th>
+                    <th>Título</th>
+                    <th>Contenidos</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr><td>1</td><td>Alcance</td><td>Ámbito de aplicación de la norma.</td></tr>
+                <tr><td>2</td><td>Referencias</td><td>Otras normas relacionadas.</td></tr>
+                <tr><td>3</td><td>Términos</td><td>Definiciones de la terminología básica.</td></tr>
+                <tr><td>4</td><td>Contexto</td><td>Identificación de aspectos relevantes de la organización.</td></tr>
+                <tr><td>5</td><td>Liderazgo</td><td>Compromiso de la dirección y asignación de recursos.</td></tr>
+                <tr><td>6</td><td>Planificación</td><td>Objetivos de seguridad y gestión de riesgos.</td></tr>
+                <tr><td>7</td><td>Soporte</td><td>Dotación de recursos para el SGSI.</td></tr>
+                <tr><td>8</td><td>Operación</td><td>Verificación de la operación y del estado de los riesgos.</td></tr>
+                <tr><td>9</td><td>Evaluación</td><td>Auditorías internas y revisiones del SGSI.</td></tr>
+                <tr><td>10</td><td>Mejora</td><td>Gestión de no conformidades y acciones correctivas.</td></tr>
+            </tbody>
+        </table>
+    </section>
+
+    <section>
+        <h2>El Modelo PDCA (Ciclo de Deming)</h2>
+        <p>El SGSI utiliza el enfoque de mejora continua:</p>
+        <div class="pdca-container">
+            <div class="pdca-box plan">PLAN (Planear)<br><small>Diseño inicial y evaluación de riesgos</small></div>
+            <div class="pdca-box do">DO (Hacer)<br><small>Implantación y ejecución del SGSI</small></div>
+            <div class="pdca-box check">CHECK (Comprobar)<br><small>Seguimiento, revisión y auditorías</small></div>
+            <div class="pdca-box act">ACT (Actuar)<br><small>Mejoras y nuevas fases de diseño</small></div>
+        </div>
+    </section>
+
+    <section>
+        <h2>Jerarquía de la Documentación</h2>
+        <p>Para el manejo de la documentación del SGSI, el compendio establece el siguiente orden jerárquico:</p>
+        <ol>
+            <li><strong>Política, objetivos y alcance:</strong> El nivel más alto (aprobado por la dirección).</li>
+            <li><strong>Manual de Seguridad:</strong> Describe el sistema global.</li>
+            <li><strong>Procedimientos:</strong> Quién, qué, cuándo y dónde.</li>
+            <li><strong>Instrucciones:</strong> Detalla cómo se realizan las actividades.</li>
+            <li><strong>Registros:</strong> Evidencia objetiva del cumplimiento de los requisitos.</li>
+        </ol>
+    </section>
+
+    <div class="footer-nav">
+        <a href="u1-t2-s1.html" class="btn btn-secondary">← Anterior: Gobierno de Seguridad</a>
+        <a href="u1-t2-s3.html" class="btn">Siguiente: Buenas Prácticas TI →</a>
+    </div>
+</div>
+
+<footer>
+    <p style="text-align: center; color: #888; margin-bottom: 2rem;">Asignatura: SGSI | UNEMI</p>
+</footer>
+
+</body>
+</html>

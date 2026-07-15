@@ -1,0 +1,208 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>U4 - Subtema 1: La seguridad es un proceso - SGSI</title>
+    <link rel="icon" type="image/svg+xml" href="../favicon_sgsi.svg">
+    <style>
+        :root {
+            --primary-color: #003366;
+            --secondary-color: #f39c12;
+            --bg-light: #f4f7f6;
+            --text-dark: #333;
+            --process-blue: #3498db;
+        }
+
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            line-height: 1.6;
+            margin: 0;
+            background-color: var(--bg-light);
+            color: var(--text-dark);
+        }
+
+        nav {
+            background-color: var(--primary-color);
+            padding: 1rem 10%;
+        }
+
+        nav a {
+            color: white;
+            text-decoration: none;
+            font-weight: bold;
+        }
+
+        .content-container {
+            width: 75%;
+            margin: 2rem auto;
+            background: white;
+            padding: 3rem;
+            border-radius: 8px;
+            box-shadow: 0 4px 10px rgba(0,0,0,0.1);
+        }
+
+        h1 {
+            color: var(--primary-color);
+            border-left: 5px solid var(--secondary-color);
+            padding-left: 15px;
+        }
+
+        h2 {
+            color: var(--primary-color);
+            border-bottom: 2px solid #eee;
+            padding-bottom: 10px;
+            margin-top: 2rem;
+        }
+
+        .process-box {
+            background-color: #e8f4f8;
+            border-left: 5px solid var(--process-blue);
+            padding: 1.5rem;
+            margin: 1.5rem 0;
+            font-style: italic;
+        }
+
+        /* Jerarquía de Herramientas */
+        .hierarchy-container {
+            margin: 2rem 0;
+        }
+
+        .hierarchy-level {
+            background: #fff;
+            border: 1px solid #ddd;
+            margin-bottom: 10px;
+            padding: 1rem;
+            border-radius: 5px;
+            transition: all 0.3s;
+        }
+
+        .hierarchy-level:hover {
+            border-left: 10px solid var(--secondary-color);
+            background-color: #fafafa;
+        }
+
+        .hierarchy-level strong {
+            color: var(--primary-color);
+            display: block;
+            font-size: 1.1rem;
+        }
+
+        .mandatory-tag {
+            font-size: 0.7rem;
+            padding: 2px 8px;
+            border-radius: 10px;
+            color: white;
+            text-transform: uppercase;
+            margin-left: 10px;
+        }
+
+        .bg-red { background-color: #e74c3c; }
+        .bg-gray { background-color: #95a5a6; }
+
+        .footer-nav {
+            margin-top: 3rem;
+            padding-top: 1rem;
+            border-top: 1px solid #ddd;
+            display: flex;
+            justify-content: space-between;
+        }
+
+        .btn {
+            padding: 0.6rem 1.2rem;
+            background: var(--primary-color);
+            color: white;
+            text-decoration: none;
+            border-radius: 4px;
+        }
+
+        .btn-secondary { background: #666; }
+    </style>
+</head>
+<body>
+
+<nav>
+    <a href="../index.html">← Volver al Índice Principal</a>
+</nav>
+
+<div class="content-container">
+    <header>
+        <p><strong>Unidad 4</strong> > Tema 1: Fundamentos de Política de seguridad</p>
+        <h1>Subtema 1: Introducción</h1>
+    </header>
+
+    <section>
+        <h2>La seguridad es un proceso</h2>
+        <div class="process-box">
+            "La seguridad de la información no es algo que se pueda lograr una vez y ya está, sino que es un proceso continuo que requiere de una planificación sistemática y evaluación constante."
+        </div>
+        <p>
+            La identificación de los <strong>activos de información</strong> es la piedra angular de este proceso. Para garantizar la seguridad, se deben aplicar políticas, normas y procedimientos que aseguren la confidencialidad, integridad y disponibilidad de forma perpetua.
+        </p>
+    </section>
+
+    <section>
+        <h2>Herramientas de Gestión</h2>
+        <p>Es vital diferenciar los distintos niveles de gestión para no confundir todos los documentos con el término genérico de "políticas":</p>
+
+        <div class="hierarchy-container">
+            <!-- Política General -->
+            <div class="hierarchy-level">
+                <strong>Política General de Seguridad</strong>
+                Declaración estratégica de alto nivel que define la importancia de la información y el compromiso de la dirección.
+            </div>
+
+            <!-- Políticas Funcionales -->
+            <div class="hierarchy-level">
+                <strong>Políticas Funcionales</strong>
+                Se enfocan en áreas o aplicaciones específicas (ej: Política de uso del correo electrónico).
+            </div>
+
+            <!-- Estándares -->
+            <div class="hierarchy-level">
+                <strong>Estándares <span class="mandatory-tag bg-red">Obligatorio</span></strong>
+                Especifican el uso uniforme de tecnologías o métodos. Su cumplimiento no es opcional.
+            </div>
+
+            <!-- Directrices -->
+            <div class="hierarchy-level">
+                <strong>Directrices <span class="mandatory-tag bg-gray">Recomendación</span></strong>
+                Sugerencias flexibles y recomendaciones de mejores prácticas. No son obligatorias.
+            </div>
+
+            <!-- Procedimientos -->
+            <div class="hierarchy-level">
+                <strong>Procedimientos</strong>
+                Documentos que detallan paso a paso cómo realizar una tarea específica de manera clara.
+            </div>
+
+            <!-- Líneas Base -->
+            <div class="hierarchy-level">
+                <strong>Líneas Base (Baselines)</strong>
+                Guías de configuración uniforme para elementos de seguridad en toda la organización.
+            </div>
+        </div>
+    </section>
+
+    <section>
+        <h2>Los tres niveles de la jerarquía</h2>
+        <p>Aunque la terminología varía, el compendio (Pág. 139) establece que siempre deben existir:</p>
+        <ul>
+            <li><strong>Nivel Estratégico:</strong> Establece las líneas generales (Dirección).</li>
+            <li><strong>Nivel Táctico:</strong> Profundiza y completa las políticas.</li>
+            <li><strong>Nivel Operativo:</strong> Indica cómo implementar y cumplir los niveles superiores (Ejecución).</li>
+        </ul>
+    </section>
+
+    <div class="footer-nav">
+        <a href="../index.html" class="btn btn-secondary">← Inicio</a>
+        <a href="u4-t1-s2.html" class="btn">Siguiente: Diseño de Políticas →</a>
+    </div>
+</div>
+
+<footer>
+    <p style="text-align: center; color: #888; margin-bottom: 2rem;">Asignatura: SGSI | UNEMI</p>
+</footer>
+
+</body>
+</html>

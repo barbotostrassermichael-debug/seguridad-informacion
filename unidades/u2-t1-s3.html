@@ -1,0 +1,210 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>U2 - Subtema 3: Control de seguridad - SGSI</title>
+    <link rel="icon" type="image/svg+xml" href="../favicon_sgsi.svg">
+    <style>
+        :root {
+            --primary-color: #003366;
+            --secondary-color: #f39c12;
+            --bg-light: #f4f7f6;
+            --text-dark: #333;
+            --accent-green: #27ae60;
+        }
+
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            line-height: 1.6;
+            margin: 0;
+            background-color: var(--bg-light);
+            color: var(--text-dark);
+        }
+
+        nav {
+            background-color: var(--primary-color);
+            padding: 1rem 10%;
+        }
+
+        nav a {
+            color: white;
+            text-decoration: none;
+            font-weight: bold;
+        }
+
+        .content-container {
+            width: 75%;
+            margin: 2rem auto;
+            background: white;
+            padding: 3rem;
+            border-radius: 8px;
+            box-shadow: 0 4px 10px rgba(0,0,0,0.1);
+        }
+
+        h1 {
+            color: var(--primary-color);
+            border-left: 5px solid var(--secondary-color);
+            padding-left: 15px;
+        }
+
+        h2 {
+            color: var(--primary-color);
+            border-bottom: 2px solid #eee;
+            padding-bottom: 10px;
+            margin-top: 2.5rem;
+        }
+
+        .intro-box {
+            background-color: #f9f9f9;
+            border: 1px solid #ddd;
+            padding: 1.5rem;
+            border-radius: 8px;
+            margin-bottom: 2rem;
+        }
+
+        /* Grid de Dimensiones */
+        .dimensions-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+            gap: 15px;
+            margin: 2rem 0;
+        }
+
+        .dim-card {
+            background: var(--primary-color);
+            color: white;
+            padding: 1rem;
+            text-align: center;
+            border-radius: 5px;
+            font-weight: bold;
+            transition: transform 0.2s;
+        }
+
+        .dim-card:hover {
+            transform: translateY(-5px);
+            background-color: var(--secondary-color);
+        }
+
+        .dimension-detail {
+            border-left: 4px solid var(--primary-color);
+            padding: 1rem 1.5rem;
+            margin: 1.5rem 0;
+            background: #fff;
+            box-shadow: 2px 2px 5px rgba(0,0,0,0.05);
+        }
+
+        .dimension-detail h3 {
+            margin-top: 0;
+            color: var(--primary-color);
+        }
+
+        .alert-box {
+            background-color: #fff4e5;
+            border: 1px solid #ffcc80;
+            padding: 1rem;
+            border-radius: 5px;
+            margin-top: 1rem;
+        }
+
+        .footer-nav {
+            margin-top: 3rem;
+            padding-top: 1rem;
+            border-top: 1px solid #ddd;
+            display: flex;
+            justify-content: space-between;
+        }
+
+        .btn {
+            padding: 0.6rem 1.2rem;
+            background: var(--primary-color);
+            color: white;
+            text-decoration: none;
+            border-radius: 4px;
+        }
+
+        .btn-secondary { background: #666; }
+    </style>
+</head>
+<body>
+
+<nav>
+    <a href="../index.html">← Volver al Índice Principal</a>
+</nav>
+
+<div class="content-container">
+    <header>
+        <p><strong>Unidad 2</strong> > Tema 1: Análisis de Riesgos</p>
+        <h1>Subtema 3: Control de seguridad</h1>
+    </header>
+
+    <section>
+        <h2>Introducción al Control</h2>
+        <div class="intro-box">
+            <p>
+                El propósito del control de seguridad es <strong>minimizar los impactos negativos</strong> que una amenaza o vulnerabilidad pueda generar. Es una actividad que se enfoca en la prevención y mitigación.
+            </p>
+            <p><strong>Regla de oro:</strong> Antes de implementar cualquier control, es estrictamente necesario realizar un <em>análisis de riesgos</em> previo para evaluar el impacto potencial.</p>
+        </div>
+    </section>
+
+    <section>
+        <h2>Las 5 Dimensiones de la Seguridad</h2>
+        <p>Según el compendio (Pág. 60), las dimensiones que debemos garantizar son:</p>
+        
+        <div class="dimensions-grid">
+            <div class="dim-card">Integridad</div>
+            <div class="dim-card">Confidencialidad</div>
+            <div class="dim-card">Disponibilidad</div>
+            <div class="dim-card">Trazabilidad</div>
+            <div class="dim-card">Autenticidad</div>
+        </div>
+
+        <div class="dimension-detail">
+            <h3>1. Integridad</h3>
+            <p>Preservar los datos y evitar que sean modificados de manera no autorizada. Garantiza la exactitud y confiabilidad, esencial para la toma de decisiones.</p>
+        </div>
+
+        <div class="dimension-detail">
+            <h3>2. Confidencialidad</h3>
+            <p>Asegura que la información sea accesible solo para personas autorizadas. Su vulneración conlleva no solo pérdidas económicas sino también problemas legales graves.</p>
+        </div>
+
+        <div class="dimension-detail">
+            <h3>3. Disponibilidad</h3>
+            <p>Capacidad de que el sistema esté operativo todo el tiempo que se necesite. Debe luchar contra ataques DoS y catástrofes naturales.</p>
+        </div>
+
+        <div class="dimension-detail" style="border-left-color: var(--secondary-color);">
+            <h3>4. Trazabilidad (Nueva Dimensión)</h3>
+            <p>
+                Ayuda a verificar en cualquier momento <strong>quién hizo qué acción y en qué momento</strong>. Es la herramienta fundamental para realizar auditorías internas o externas efectivas.
+            </p>
+        </div>
+
+        <div class="dimension-detail" style="border-left-color: var(--secondary-color);">
+            <h3>5. Autenticidad (Nueva Dimensión)</h3>
+            <p>
+                Acción de verificar la identidad del usuario que origina una información o accede al sistema. Proporciona certeza sobre la autoría de los datos.
+            </p>
+        </div>
+    </section>
+
+    <section>
+        <div class="alert-box">
+            <strong>Ejemplo de ataque a la Integridad:</strong> La modificación del saldo de una cuenta bancaria. Este ataque busca alterar información para obtener beneficios fraudulentos y suele derivar también en una pérdida de confidencialidad.
+        </div>
+    </section>
+
+    <div class="footer-nav">
+        <a href="u2-t1-s2.html" class="btn btn-secondary">← Anterior: Clasificación</a>
+        <a href="u2-t1-s4.html" class="btn">Siguiente: Tipos de análisis de Riesgos →</a>
+    </div>
+</div>
+
+<footer>
+    <p style="text-align: center; color: #888; margin-bottom: 2rem;">Asignatura: SGSI | UNEMI</p>
+</footer>
+
+</body>
+</html>
